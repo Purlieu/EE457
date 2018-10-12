@@ -56,7 +56,7 @@ COMPONENT gen_counter
 component traffic_control 
 	port (
 		clk, reset_a, weight, night, north_south: IN STD_LOGIC;
-		count : in std_logic_vector(2 downto 0); -- 1 if we've reached a second interval
+		count : in std_logic_vector(3 downto 0); -- 1 if we've reached a second interval
 		
 		-- Declare output control signals "in_sel", "shift_sel", "state_out", "done", "clk_ena" and "sclr_n"
 		state_out : OUT std_logic_vector(3 DOWNTO 0)
@@ -75,7 +75,7 @@ end component traffic_segment_cntrl;
 	signal north_south : std_logic;
 	signal out_state : UNSIGNED(3 DOWNTO 0);
 	signal n_key0 : std_logic;
-	signal count : std_logic_Vector(2 downto 0);
+	signal count : std_logic_Vector(3 downto 0);
 	
 begin
 	n_key0 <= KEY(0);
@@ -83,7 +83,7 @@ begin
 -- processes, component instantiations, general logic.
 	u1: gen_counter
 		-- 26 bits wide and 50,000,000 max for 1 second
-		generic map (wide => 3, max => 50000000)
+		generic map (wide => 4, max => 50000000)
 		PORT MAP (
 			clk => clock_50,
 			load => '0',
@@ -123,7 +123,7 @@ begin
 		weight => SW(0),
 		night => SW(1),
 		north_south => north_south,
-		count => count(2 downto 0),
+		count => count(3 downto 0),
 		state_out => input_state
 	);
 	

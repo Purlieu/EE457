@@ -74,6 +74,12 @@ begin
 					else
 						output <= "0000001";
 					end if;
+				when "1100" =>
+					if north_South = '1' then
+						output <= "0001000";
+					else
+						output <= "0001000";
+					end if;
 				when others =>
 						output <= "0000000";
 			end case;
