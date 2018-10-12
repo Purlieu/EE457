@@ -1,0 +1,13 @@
+|counter
+clk => count_out[0]~reg0.CLK
+clk => count_out[1]~reg0.CLK
+clk => q_var[0].CLK
+clk => q_var[1].CLK
+aclr_n => count_out[0]~reg0.ACLR
+aclr_n => count_out[1]~reg0.ACLR
+aclr_n => q_var[0].ACLR
+aclr_n => q_var[1].ACLR
+count_out[0] << count_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count_out[1] << count_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

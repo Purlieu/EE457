@@ -1,0 +1,215 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6
+Ede1_top
+Z1 w1539374394
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/DE1_top.vhd
+Z6 FC:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/DE1_top.vhd
+l0
+L6
+VJ;cCA?<::3VnVcFQ`B;I=0
+!s100 zdGon0f51ij`_L;hRcTM@0
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1539374447
+!i10b 1
+Z9 !s108 1539374447.000000
+Z10 !s90 -reportprogress|300|-work|lab6|-2002|-explicit|-stats=none|C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/DE1_top.vhd|
+Z11 !s107 C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/DE1_top.vhd|
+!i113 1
+Z12 o-work lab6 -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Astruct
+R2
+R3
+R4
+DEx4 work 7 de1_top 0 22 J;cCA?<::3VnVcFQ`B;I=0
+l80
+L35
+VTK:fB^YTKJZQdDeK`UkXA2
+!s100 g4KYI38>eS3eA^4L8Fm`D0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ede1_top_lab6_tb
+Z14 w1539374443
+R2
+R3
+R4
+R0
+Z15 8C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/de1_top_vhdl_tb.vhd
+Z16 FC:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/de1_top_vhdl_tb.vhd
+l0
+L5
+VT=X`[:0]9;l1=D249UhOj3
+!s100 ^45WbTl8^D7k6QmMaZCka0
+R7
+32
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-work|lab6|-2002|-explicit|-stats=none|C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/de1_top_vhdl_tb.vhd|
+Z18 !s107 C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/de1_top_vhdl_tb.vhd|
+!i113 1
+R12
+R13
+Abehav
+R2
+R3
+R4
+DEx4 work 15 de1_top_lab6_tb 0 22 T=X`[:0]9;l1=D249UhOj3
+l39
+L8
+VORj8B9`?`=6?m?_j?dL]W2
+!s100 _e<h@fZE4ZoXTlAnT8EE[3
+R7
+32
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Egen_counter
+Z19 w1539271251
+R2
+R3
+R4
+R0
+Z20 8C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/counter.vhd
+Z21 FC:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/counter.vhd
+l0
+L5
+VHzeRCUA4HPAmG1cFFnE642
+!s100 JFBWPF>fn8:lho23i8FoW3
+R7
+32
+R8
+!i10b 1
+R9
+Z22 !s90 -reportprogress|300|-work|lab6|-2002|-explicit|-stats=none|C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/counter.vhd|
+Z23 !s107 C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/counter.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+DEx4 work 11 gen_counter 0 22 HzeRCUA4HPAmG1cFFnE642
+l26
+L22
+VcRfI8do;NQN`m25?JHLSo0
+!s100 d0?>FW^S4MTFXLg0_^N:?3
+R7
+32
+R8
+!i10b 1
+R9
+R22
+R23
+!i113 1
+R12
+R13
+Etraffic_control
+Z24 w1539374008
+R2
+R3
+R4
+R0
+Z25 8C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/traffic_contrl.vhd
+Z26 FC:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/traffic_contrl.vhd
+l0
+L6
+V<AKI<T6nQZgahoOURk[o53
+!s100 C=jh<QK6bN=Lc`Y?T=WRD1
+R7
+32
+R8
+!i10b 1
+R9
+Z27 !s90 -reportprogress|300|-work|lab6|-2002|-explicit|-stats=none|C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/traffic_contrl.vhd|
+Z28 !s107 C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/traffic_contrl.vhd|
+!i113 1
+R12
+R13
+Alogic
+R2
+R3
+R4
+Z29 DEx4 work 15 traffic_control 0 22 <AKI<T6nQZgahoOURk[o53
+l25
+L19
+Z30 VfIf71On>cS^[E:gjo3DVA2
+Z31 !s100 [CL^l6dRcKRBgA?AEb4BP3
+R7
+32
+R8
+!i10b 1
+R9
+R27
+R28
+!i113 1
+R12
+R13
+Etraffic_segment_cntrl
+Z32 w1539313789
+R4
+R3
+R2
+R0
+Z33 8C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/traffic_segment_cntrl.vhd
+Z34 FC:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/traffic_segment_cntrl.vhd
+l0
+L5
+ViSY4<A[Q3A;KCFHZQ;RM=0
+!s100 A@XOMUgOGHYVk15kDl5Z`0
+R7
+32
+R8
+!i10b 1
+R9
+Z35 !s90 -reportprogress|300|-work|lab6|-2002|-explicit|-stats=none|C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/traffic_segment_cntrl.vhd|
+Z36 !s107 C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/traffic_segment_cntrl.vhd|
+!i113 1
+R12
+R13
+Alogic
+R4
+R3
+R2
+DEx4 work 21 traffic_segment_cntrl 0 22 iSY4<A[Q3A;KCFHZQ;RM=0
+l15
+L14
+VW1o4GozG7KN=i`la^Sij?0
+!s100 3;=6:h_XCa8T?GDCDaoSY0
+R7
+32
+R8
+!i10b 1
+R9
+R35
+R36
+!i113 1
+R12
+R13

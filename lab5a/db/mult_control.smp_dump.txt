@@ -1,0 +1,9 @@
+
+State Machine - |mult_control|current_state
+Name current_state.err current_state.calc_done current_state.msb current_state.mid current_state.lsb current_state.idle 
+current_state.idle 0 0 0 0 0 0 
+current_state.lsb 0 0 0 0 1 1 
+current_state.mid 0 0 0 1 0 1 
+current_state.msb 0 0 1 0 0 1 
+current_state.calc_done 0 1 0 0 0 1 
+current_state.err 1 0 0 0 0 1 

@@ -1,0 +1,25 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "count_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "count_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "aclr_n",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

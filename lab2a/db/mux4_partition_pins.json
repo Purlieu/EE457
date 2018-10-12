@@ -1,0 +1,61 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "mux_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mux_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mux_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mux_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "mux_in_b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mux_sel",
+					"strict" : false
+				},
+				{
+					"name" : "mux_in_a[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mux_in_b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mux_in_a[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mux_in_b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mux_in_a[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mux_in_b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "mux_in_a[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

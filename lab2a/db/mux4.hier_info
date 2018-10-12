@@ -1,0 +1,19 @@
+|mux4
+mux_in_a[0] => mux_out.DATAB
+mux_in_a[1] => mux_out.DATAB
+mux_in_a[2] => mux_out.DATAB
+mux_in_a[3] => mux_out.DATAB
+mux_in_b[0] => mux_out.DATAA
+mux_in_b[1] => mux_out.DATAA
+mux_in_b[2] => mux_out.DATAA
+mux_in_b[3] => mux_out.DATAA
+mux_sel => mux_out.OUTPUTSELECT
+mux_sel => mux_out.OUTPUTSELECT
+mux_sel => mux_out.OUTPUTSELECT
+mux_sel => mux_out.OUTPUTSELECT
+mux_out[0] <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[1] <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[2] <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[3] <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

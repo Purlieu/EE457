@@ -1,0 +1,33 @@
+ LIBRARY ieee;
+	USE ieee.numeric_std.all;
+	use IEEE.std_logic_1164.all;
+	
+entity reg16 is
+	port(
+		clk: in std_logic;
+		sclr_n: in std_logic;
+		clk_ena: in std_logic;
+		datain: in unsigned(15 downto 0);
+		reg_out: out unsigned(15 downto 0)
+	);
+end reg16;
+
+architecture behavior of reg16 is
+	begin
+		process(clk, sclr_n, clk_ena, datain)
+		variable tempdatain: unsigned(15 downto 0);
+		begin
+			if clk'event and clk = '1' then
+				if clk_ena = '1' then
+					if sclr_n = '0' then
+						reg_out <= "0000000000000000";
+					else
+						reg_out <= datain;
+					end if;
+				elsif clk_ena = '0' then
+					tempdatain := datain;
+					tempdatain := tempdatain;
+				end if;
+			end if;
+		end process;
+end behavior;

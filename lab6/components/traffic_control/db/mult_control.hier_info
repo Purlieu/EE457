@@ -1,0 +1,35 @@
+|mult_control
+clk => current_state~1.DATAIN
+reset_a => current_state~3.DATAIN
+start => next_state.lsb.DATAB
+start => Selector2.IN5
+start => Selector5.IN4
+start => mealy.IN1
+start => mealy.IN1
+start => mealy.IN1
+start => Selector5.IN1
+start => sclr_n.DATAB
+start => Selector0.IN2
+start => process_1.IN1
+start => Selector2.IN4
+start => done.DATAB
+count[0] => Equal0.IN3
+count[0] => Equal1.IN3
+count[0] => Equal2.IN3
+count[0] => Equal3.IN3
+count[1] => Equal0.IN2
+count[1] => Equal1.IN2
+count[1] => Equal2.IN2
+count[1] => Equal3.IN2
+input_sel[0] << Selector4.DB_MAX_OUTPUT_PORT_TYPE
+input_sel[1] << Selector3.DB_MAX_OUTPUT_PORT_TYPE
+shift_sel[0] << shift_sel.DB_MAX_OUTPUT_PORT_TYPE
+shift_sel[1] << shift_sel.DB_MAX_OUTPUT_PORT_TYPE
+state_out[0] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+state_out[1] << state_out.DB_MAX_OUTPUT_PORT_TYPE
+state_out[2] << state_out.DB_MAX_OUTPUT_PORT_TYPE
+done << done.DB_MAX_OUTPUT_PORT_TYPE
+clk_ena << Selector5.DB_MAX_OUTPUT_PORT_TYPE
+sclr_n << sclr_n.DB_MAX_OUTPUT_PORT_TYPE
+
+

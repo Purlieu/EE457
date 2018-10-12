@@ -1,0 +1,19 @@
+LIBRARY ieee;
+USE ieee.NUMERIC_STD.all;
+use ieee.STD_LOGIC_1164.all;
+
+entity traffic_segment_cntrl is
+	port (
+		input :  in std_logic_vector(3 downto 0);
+		output : out std_logic_vector(6 downto 0);
+	);
+	
+end entity traffic_Segment_cntrl;
+
+architecture logic of traffic_segment_cntrl is
+begin
+	process(input) is
+		begin
+			case input is
+				when "0000" =>
+					

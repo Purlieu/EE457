@@ -1,0 +1,15 @@
+
+State Machine - |DE1_top|traffic_control:u6|current_state
+Name current_state.blinking_off current_state.blinking_on current_state.yellow_b current_state.yellow_a current_state.green_b current_state.green_a current_state.yellow_arrow_b current_state.yellow_arrow_a current_state.green_arrow_b current_state.green_arrow_a current_state.weight_check current_state.night_check 
+current_state.night_check 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.weight_check 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.green_arrow_a 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.green_arrow_b 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.yellow_arrow_a 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.yellow_arrow_b 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.green_a 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.green_b 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.yellow_a 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.yellow_b 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.blinking_on 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.blinking_off 1 0 0 0 0 0 0 0 0 0 0 1 
