@@ -27,56 +27,97 @@ begin
 	begin
 		if reset_a = '1' then
 			current_state <= night_check;
+			reset_out <= '1';
 		elsif clk'event and clk = '1' then
+			if current_state = weight_check_NS
+			or current_state = weight_check_EW
+			or count = "1001"
+			then
+				reset_out <= '1';
+			else
+				reset_out <= '0';
+			end if;
 			current_state <= next_state;
 		end if;
 	end process;
 	
 	process (current_state, weight, night, north_south, count)
 	begin
-		reset_out <= '0';
 		case current_state is
 			when night_check =>
-				reset_out <= '1';
 				if night = '0' then 
 					next_state <= weight_check_NS;
 				else
 					next_state <= blinking_on;
 				end if;
 			when weight_check_NS =>
-				reset_out <= '1';
 				if weight = '1' then
 					next_state <= green_arrow_a;
 				else
 					next_state <= green_a;
 				end if;
 			when weight_check_EW =>
-				reset_out <= '1';
 				if weight = '1' then
 					next_state <= green_arrow_b;
 				else
 					next_state <= green_b;
 				end if;
 			when green_arrow_a =>
-					next_state <= yellow_arrow_a;
+					if count = "0111" then
+						next_state <= yellow_arrow_a;
+					else
+						next_state <= current_state;
+					end if;
 			when yellow_arrow_a =>
-					next_state <= green_a;
+					if count = "1001" then
+						next_state <= green_a;
+					else
+						nexT_state <= current_state;
+					end if; 	
 			when green_a =>
-					next_state <= yellow_a;
+					if count = "0111" then
+						next_state <= yellow_a;
+					else
+						next_state <= current_state;
+					end if;
 			when yellow_a =>
-					next_state <= weight_check_EW;
+					if count = "1001" then
+						next_state <= weight_check_EW;
+					else
+						next_state <= current_state;
+					end if;
 			when green_arrow_b =>
-					next_state <= yellow_arrow_b;
+					if count = "0111" then
+						next_state <= yellow_arrow_b;
+					else
+						next_state <= current_state;
+					end if;
 			when yellow_arrow_b =>
-					next_state <= green_b;
+					if count = "1001" then
+						next_state <= green_b;
+					else
+						next_state <= current_state;
+					end if;
 			when green_b =>
-					next_state <= yellow_b;
+					if count = "0111" then
+						next_state <= yellow_b;
+					else
+						next_state <= current_state;
+					end if;
 			when yellow_b =>
-					next_state <= night_check;
+					if count = "1001" then
+						next_state <= night_check;
+					else
+						next_state <= current_state;
+					end if;
 			when blinking_on =>
 					next_state <= blinking_off;
 			when blinking_off =>
-					next_state <= night_check;
+					if night = '1' then
+						next_state <= blinking_on;
+					else
+						next_state <= night_check;
+					end if;
 		end case;
 	end process;
 	

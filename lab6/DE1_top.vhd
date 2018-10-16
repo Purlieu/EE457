@@ -59,7 +59,8 @@ component traffic_control
 		count : in std_logic_vector(3 downto 0); -- 1 if we've reached a second interval
 		
 		-- Declare output control signals "in_sel", "shift_sel", "state_out", "done", "clk_ena" and "sclr_n"
-		state_out : OUT std_logic_vector(3 DOWNTO 0)
+		state_out : OUT std_logic_vector(3 DOWNTO 0);
+		reset_out : out std_logic
 	);
 end component traffic_control;
 
@@ -76,19 +77,19 @@ end component traffic_segment_cntrl;
 	signal out_state : UNSIGNED(3 DOWNTO 0);
 	signal n_key0 : std_logic;
 	signal count : std_logic_Vector(3 downto 0);
+	signal reset : std_logic;
 	
 begin
 	n_key0 <= KEY(0);
 	north_south <= '1';
 -- processes, component instantiations, general logic.
 	u1: gen_counter
-		-- 26 bits wide and 50,000,000 max for 1 second
 		generic map (wide => 4, max => 50000000)
 		PORT MAP (
 			clk => clock_50,
 			load => '0',
 			data => (others => '0'),
-			reset => n_key0,
+			reset => reset,
 			enable => '1',
 			count => count
 		);
@@ -124,7 +125,8 @@ begin
 		night => SW(1),
 		north_south => north_south,
 		count => count(3 downto 0),
-		state_out => input_state
+		state_out => input_state,
+		reset_out => reset
 	);
 	
 end;

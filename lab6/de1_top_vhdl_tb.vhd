@@ -52,13 +52,35 @@ begin
 
 		sw     <= "0000000000"; -- drive all the switch inputs to a 0
 		key <= "1111"; -- default state on the board, and reset
-		wait for 5 ns; 	
+		wait for 5 ns; -- wait for a fraction of the clock so stimulus is not occuring on clock edges
+		
 		key <= "1110"; -- no reset
-		sw <= "0000000000"; -- NS-G
+		sw <= "0000000000"; -- No-Night-Mode / No Weight
+		
+		wait for clk_cycle;
+		
+		key <= "1111"; -- reset
+		sw <= "0000000000"; -- No-Night-Mode / No Weight
+		-- wait for a fraction of the clock so stimulus is not occuring on clock edges
+
+		wait for clk_cycle;
+		
+		key <= "1110"; -- no reset
+		sw <= "0000000001"; -- No-Night / Weighted
 		-- wait for a fraction of the clock so stimulus is not occuring on clock edges
 
 		wait for clk_cycle;
 		-- add more vectors to test everything
+		
+		key <= "1110"; -- no reset
+		sw <= "0000000010"; -- Night / No Weighted
+		-- wait for a fraction of the clock so stimulus is not occuring on clock edges
+		wait for clk_cycle;
+
+		key <= "1110"; -- no reset
+		sw <= "0000000011"; -- Night / Weighted
+		-- wait for a fraction of the clock so stimulus is not occuring on clock edges
+		wait for clk_cycle;
 		
 		end process;
 		

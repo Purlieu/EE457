@@ -29,7 +29,6 @@ HEX3[3] << traffic_segment_cntrl:u5.output[3]
 HEX3[4] << traffic_segment_cntrl:u5.output[4]
 HEX3[5] << traffic_segment_cntrl:u5.output[5]
 HEX3[6] << traffic_segment_cntrl:u5.output[6]
-KEY[0] => gen_counter:u1.reset
 KEY[0] => traffic_control:u6.reset_a
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
@@ -269,23 +268,30 @@ output[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |DE1_top|traffic_control:u6
+clk => reset_out~reg0.CLK
 clk => current_state~1.DATAIN
+reset_a => reset_out~reg0.PRESET
 reset_a => current_state~3.DATAIN
-weight => next_state.green_arrow_a.DATAB
-weight => next_state.green_arrow_b.DATAB
-weight => Selector0.IN2
-weight => Selector1.IN2
+weight => Selector1.IN3
+weight => Selector2.IN3
+weight => Selector5.IN1
+weight => Selector6.IN1
 night => next_state.blinking_on.DATAB
+night => Selector0.IN2
 night => next_state.weight_check_NS.DATAB
 north_south => ~NO_FANOUT~
-count[0] => ~NO_FANOUT~
-count[1] => ~NO_FANOUT~
-count[2] => ~NO_FANOUT~
-count[3] => ~NO_FANOUT~
-state_out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-state_out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-state_out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-state_out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-reset_out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+count[0] => Equal0.IN2
+count[0] => Equal1.IN1
+count[1] => Equal0.IN1
+count[1] => Equal1.IN3
+count[2] => Equal0.IN0
+count[2] => Equal1.IN0
+count[3] => Equal0.IN3
+count[3] => Equal1.IN2
+state_out[0] <= WideOr12.DB_MAX_OUTPUT_PORT_TYPE
+state_out[1] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
+state_out[2] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+state_out[3] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+reset_out <= reset_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

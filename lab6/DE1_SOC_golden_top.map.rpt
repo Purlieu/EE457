@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SOC_golden_top
-Fri Oct 12 16:57:17 2018
+Tue Oct 16 14:04:55 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -15,16 +15,17 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |DE1_top|traffic_control:u6|current_state
   9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: gen_counter:u1
- 11. Port Connectivity Checks: "traffic_control:u6"
- 12. Port Connectivity Checks: "traffic_segment_cntrl:u5"
- 13. Port Connectivity Checks: "traffic_segment_cntrl:u4"
- 14. Port Connectivity Checks: "traffic_segment_cntrl:u3"
- 15. Port Connectivity Checks: "traffic_segment_cntrl:u2"
- 16. Port Connectivity Checks: "gen_counter:u1"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+ 10. Inverted Register Statistics
+ 11. Parameter Settings for User Entity Instance: gen_counter:u1
+ 12. Port Connectivity Checks: "traffic_control:u6"
+ 13. Port Connectivity Checks: "traffic_segment_cntrl:u5"
+ 14. Port Connectivity Checks: "traffic_segment_cntrl:u4"
+ 15. Port Connectivity Checks: "traffic_segment_cntrl:u3"
+ 16. Port Connectivity Checks: "traffic_segment_cntrl:u2"
+ 17. Port Connectivity Checks: "gen_counter:u1"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -50,13 +51,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Oct 12 16:57:17 2018       ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 16 14:04:55 2018       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SOC_golden_top                          ;
 ; Top-level Entity Name           ; DE1_top                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 13                                          ;
+; Total registers                 ; 18                                          ;
 ; Total pins                      ; 43                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -191,25 +192,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 13             ;
+; Estimate of Logic utilization (ALMs needed) ; 21             ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 21             ;
+; Combinational ALUT usage for logic          ; 33             ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 2              ;
-;     -- 5 input functions                    ; 2              ;
-;     -- 4 input functions                    ; 10             ;
-;     -- <=3 input functions                  ; 7              ;
+;     -- 6 input functions                    ; 8              ;
+;     -- 5 input functions                    ; 3              ;
+;     -- 4 input functions                    ; 17             ;
+;     -- <=3 input functions                  ; 5              ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 13             ;
+; Dedicated logic registers                   ; 18             ;
 ;                                             ;                ;
 ; I/O pins                                    ; 43             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; clock_50~input ;
-; Maximum fan-out                             ; 13             ;
-; Total fan-out                               ; 180            ;
-; Average fan-out                             ; 1.50           ;
+; Maximum fan-out                             ; 18             ;
+; Total fan-out                               ; 259            ;
+; Average fan-out                             ; 1.89           ;
 +---------------------------------------------+----------------+
 
 
@@ -218,8 +219,9 @@ refer to the applicable agreement for further details.
 +-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Entity Name           ; Library Name ;
 +-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+-----------------------+--------------+
-; |DE1_top                      ; 21 (0)              ; 13 (0)                    ; 0                 ; 0          ; 43   ; 0            ; |DE1_top                          ; DE1_top               ; work         ;
-;    |traffic_control:u6|       ; 11 (11)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_top|traffic_control:u6       ; traffic_control       ; work         ;
+; |DE1_top                      ; 33 (0)              ; 18 (0)                    ; 0                 ; 0          ; 43   ; 0            ; |DE1_top                          ; DE1_top               ; work         ;
+;    |gen_counter:u1|           ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_top|gen_counter:u1           ; gen_counter           ; work         ;
+;    |traffic_control:u6|       ; 19 (19)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_top|traffic_control:u6       ; traffic_control       ; work         ;
 ;    |traffic_segment_cntrl:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_top|traffic_segment_cntrl:u2 ; traffic_segment_cntrl ; work         ;
 ;    |traffic_segment_cntrl:u3| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_top|traffic_segment_cntrl:u3 ; traffic_segment_cntrl ; work         ;
 ;    |traffic_segment_cntrl:u4| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_top|traffic_segment_cntrl:u4 ; traffic_segment_cntrl ; work         ;
@@ -255,14 +257,24 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 13    ;
+; Total registers                              ; 18    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 13    ;
+; Number of registers using Asynchronous Clear ; 18    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; traffic_control:u6|reset_out           ; 4       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
 
 
 +-------------------------------------------------------------+
@@ -276,14 +288,13 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "traffic_control:u6"                                                                                             ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                  ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; north_south ; Input  ; Info     ; Stuck at VCC                                                                                             ;
-; reset_out   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
++------------------------------------------------+
+; Port Connectivity Checks: "traffic_control:u6" ;
++-------------+-------+----------+---------------+
+; Port        ; Type  ; Severity ; Details       ;
++-------------+-------+----------+---------------+
+; north_south ; Input ; Info     ; Stuck at VCC  ;
++-------------+-------+----------+---------------+
 
 
 +------------------------------------------------------+
@@ -339,21 +350,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 13                          ;
-;     CLR               ; 13                          ;
-; arriav_lcell_comb     ; 24                          ;
-;     normal            ; 24                          ;
+; arriav_ff             ; 18                          ;
+;     CLR               ; 18                          ;
+; arriav_lcell_comb     ; 36                          ;
+;     normal            ; 36                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 5                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 2                           ;
 ;         3 data inputs ; 2                           ;
-;         4 data inputs ; 10                          ;
-;         5 data inputs ; 2                           ;
-;         6 data inputs ; 2                           ;
+;         4 data inputs ; 17                          ;
+;         5 data inputs ; 3                           ;
+;         6 data inputs ; 8                           ;
 ; boundary_port         ; 43                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.10                        ;
+; Average LUT depth     ; 1.95                        ;
 +-----------------------+-----------------------------+
 
 
@@ -372,7 +383,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Fri Oct 12 16:57:07 2018
+    Info: Processing started: Tue Oct 16 14:04:45 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_base -c DE1_SOC_golden_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -389,10 +400,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file traffic
     Info (12022): Found design unit 1: traffic_segment_cntrl-logic File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/traffic_segment_cntrl.vhd Line: 14
     Info (12023): Found entity 1: traffic_segment_cntrl File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/traffic_segment_cntrl.vhd Line: 5
 Info (12127): Elaborating entity "DE1_top" for the top level hierarchy
-Info (12128): Elaborating entity "gen_counter" for hierarchy "gen_counter:u1" File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/DE1_top.vhd Line: 84
-Info (12128): Elaborating entity "traffic_segment_cntrl" for hierarchy "traffic_segment_cntrl:u2" File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/DE1_top.vhd Line: 96
-Info (12128): Elaborating entity "traffic_control" for hierarchy "traffic_control:u6" File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/DE1_top.vhd Line: 120
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "gen_counter" for hierarchy "gen_counter:u1" File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/DE1_top.vhd Line: 86
+Info (12128): Elaborating entity "traffic_segment_cntrl" for hierarchy "traffic_segment_cntrl:u2" File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/DE1_top.vhd Line: 97
+Info (12128): Elaborating entity "traffic_control" for hierarchy "traffic_control:u6" File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/DE1_top.vhd Line: 121
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/DE1_top.vhd Line: 15
     Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/DE1_top.vhd Line: 15
@@ -417,13 +427,13 @@ Warning (21074): Design contains 11 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/DE1_top.vhd Line: 29
     Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/DE1_top.vhd Line: 29
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6/DE1_top.vhd Line: 29
-Info (21057): Implemented 70 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 77 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 28 output pins
-    Info (21061): Implemented 27 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 4867 megabytes
-    Info: Processing ended: Fri Oct 12 16:57:17 2018
+    Info (21061): Implemented 34 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 4866 megabytes
+    Info: Processing ended: Tue Oct 16 14:04:55 2018
     Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:21
 
