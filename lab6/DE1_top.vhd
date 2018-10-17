@@ -15,7 +15,7 @@ Port(
 	HEX0		:out	std_logic_vector( 6 downto 0); -- right most
 	HEX1		:out	std_logic_vector( 6 downto 0);	
 	HEX2		:out	std_logic_vector( 6 downto 0);	
-	HEX3		:out	std_logic_vector( 6 downto 0);	
+	HEX3		:out	std_logic_vector( 6 downto 0);		
 
 	-- Push Button
 	-- the KEY input is normally high, pressing the KEY
@@ -55,13 +55,12 @@ COMPONENT gen_counter
 
 component traffic_control 
 	port (
-		clk, reset_a, weight, night, north_south: IN STD_LOGIC;
-		count : in std_logic_vector(3 downto 0); -- 1 if we've reached a second interval
+		clk, reset_a, weight_EW, weight_NS, night, north_south: IN STD_LOGIC;
+		count : in std_logic; -- 1 if we've reached a second interval
 		
 		-- Declare output control signals "in_sel", "shift_sel", "state_out", "done", "clk_ena" and "sclr_n"
-		state_out : OUT std_logic_vector(3 DOWNTO 0);
-		reset_out : out std_logic
-	);
+		state_out : OUT std_logic_vector(3 DOWNTO 0)
+		);
 end component traffic_control;
 
 component traffic_segment_cntrl
@@ -76,22 +75,22 @@ end component traffic_segment_cntrl;
 	signal north_south : std_logic;
 	signal out_state : UNSIGNED(3 DOWNTO 0);
 	signal n_key0 : std_logic;
-	signal count : std_logic_Vector(3 downto 0);
+	signal count : std_logic_Vector(25 downto 0);
 	signal reset : std_logic;
+	signal secondPassed : std_logic;
 	
 begin
-	n_key0 <= KEY(0);
-	north_south <= '1';
 -- processes, component instantiations, general logic.
+	n_key0 <= not KEY(0);
 	u1: gen_counter
-		generic map (wide => 4, max => 50000000)
+		generic map (wide => 26, max => 50000000)
 		PORT MAP (
 			clk => clock_50,
 			load => '0',
 			data => (others => '0'),
-			reset => reset,
+			reset => n_key0,
 			enable => '1',
-			count => count
+			term => secondPassed
 		);
 	
 	u2: traffic_segment_cntrl port map (
@@ -121,13 +120,13 @@ begin
 	u6: traffic_control port map (
 		clk => clock_50,
 		reset_a => n_key0,
-		weight => SW(0),
-		night => SW(1),
+		weight_NS => SW(0),
+		weight_EW => SW(1),
+		night => SW(2),
 		north_south => north_south,
-		count => count(3 downto 0),
-		state_out => input_state,
-		reset_out => reset
-	);
+		count => secondPassed,
+		state_out => input_state
+		);
 	
 end;
 

@@ -24,8 +24,8 @@ port (
 end component;
 
 	
-constant CLK_PER:time := 20 ns;
-constant clk_cycle:time := 2*clk_per;
+constant CLK_PER:time := 1 ns;
+constant clk_cycle:time := clk_per;
 	
 signal aclr_n : std_logic;
 signal clk    : std_logic;
@@ -51,10 +51,10 @@ begin
 	vectors:process begin -- put you test vectors here, remember to advance the simulation in modelsim
 
 		sw     <= "0000000000"; -- drive all the switch inputs to a 0
-		key <= "1111"; -- default state on the board, and reset
+		 key  <=   "1110";                     -- default state on the board, and reset
 		wait for 5 ns; -- wait for a fraction of the clock so stimulus is not occuring on clock edges
 		
-		key <= "1110"; -- no reset
+      key  <=   "1111";   -- no reset
 		sw <= "0000000000"; -- No-Night-Mode / No Weight
 		
 		wait for clk_cycle;
@@ -65,20 +65,40 @@ begin
 
 		wait for clk_cycle;
 		
-		key <= "1110"; -- no reset
-		sw <= "0000000001"; -- No-Night / Weighted
+		key  <=   "1111";   -- no reset		
+		sw <= "0000000001"; -- No-Night / Weighted NS
 		-- wait for a fraction of the clock so stimulus is not occuring on clock edges
 
 		wait for clk_cycle;
 		-- add more vectors to test everything
 		
-		key <= "1110"; -- no reset
-		sw <= "0000000010"; -- Night / No Weighted
+		key <= "1111"; -- no reset
+		sw <= "0000000010"; -- Night / Weighted EW
 		-- wait for a fraction of the clock so stimulus is not occuring on clock edges
 		wait for clk_cycle;
 
-		key <= "1110"; -- no reset
-		sw <= "0000000011"; -- Night / Weighted
+		key <= "1111"; -- no reset
+		sw <= "0000000011"; -- No-Night / Weighted EW / Weighted NS
+		-- wait for a fraction of the clock so stimulus is not occuring on clock edges
+		wait for clk_cycle;
+		
+		key <= "1111"; -- no reset
+		sw <= "0000000100"; -- Night / No Weight
+		-- wait for a fraction of the clock so stimulus is not occuring on clock edges
+		wait for clk_cycle;
+		
+		key <= "1111"; -- no reset
+		sw <= "0000000101"; -- Night / Weight NS
+		-- wait for a fraction of the clock so stimulus is not occuring on clock edges
+		wait for clk_cycle;
+		
+		key <= "1111"; -- no reset
+		sw <= "0000000110"; -- Night / Weight EW
+		-- wait for a fraction of the clock so stimulus is not occuring on clock edges
+		wait for clk_cycle;
+		
+		key <= "1111"; -- no reset
+		sw <= "0000000111"; -- Night / Weight EW / Weight NS
 		-- wait for a fraction of the clock so stimulus is not occuring on clock edges
 		wait for clk_cycle;
 		
