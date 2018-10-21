@@ -7,4 +7,199 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6
+Z0 dC:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab6
+Ede1_top
+Z1 w1540135625
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8de1_top.vhd
+Z6 Fde1_top.vhd
+l0
+L6
+VQ<9`7^gc;7U62J;k2a@af2
+!s100 Mb6JkCikZC@o=C=`dnaW[2
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1540136275
+!i10b 1
+Z9 !s108 1540136275.000000
+Z10 !s90 -reportprogress|300|de1_top.vhd|
+Z11 !s107 de1_top.vhd|
+!i113 1
+Z12 tExplicit 1 CvgOpt 0
+Astruct
+R2
+R3
+R4
+DEx4 work 7 de1_top 0 22 Q<9`7^gc;7U62J;k2a@af2
+l150
+L39
+VlC9N<92ofM^maCS=PPJD42
+!s100 KW9?egb3AI_`ebe3h[F8[2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+Ede1_top_lab6_tb
+Z13 w1540135940
+R2
+R3
+R4
+R0
+Z14 8de1_top_vhdl_tb.vhd
+Z15 Fde1_top_vhdl_tb.vhd
+l0
+L5
+VDHo_nN]hR@:6O>c`WE_PS0
+!s100 B9SBAE_XL_Ij10Id;SF1?3
+R7
+32
+R8
+!i10b 1
+R9
+Z16 !s90 -reportprogress|300|de1_top_vhdl_tb.vhd|
+Z17 !s107 de1_top_vhdl_tb.vhd|
+!i113 1
+R12
+Abehav
+R2
+R3
+R4
+DEx4 work 15 de1_top_lab6_tb 0 22 DHo_nN]hR@:6O>c`WE_PS0
+l45
+L8
+VAL?JEDLdT7>o8k9ze0Q631
+Z18 !s100 T5SI]W:a7FP=`RLa`MZXc0
+R7
+32
+R8
+!i10b 1
+R9
+R16
+R17
+!i113 1
+R12
+Egen_counter
+Z19 w1540091828
+R2
+R3
+R4
+R0
+Z20 8counter.vhd
+Z21 Fcounter.vhd
+l0
+L5
+Vdn<WOoajlVeELEdWB3Fi90
+!s100 o>2laMaBGEW5WGg86=Rn:0
+R7
+32
+R8
+!i10b 1
+R9
+Z22 !s90 -reportprogress|300|counter.vhd|
+Z23 !s107 counter.vhd|
+!i113 1
+R12
+Artl
+R2
+R3
+R4
+DEx4 work 11 gen_counter 0 22 dn<WOoajlVeELEdWB3Fi90
+l26
+L22
+V9]UEO]I1bDcV3AU1bSP>N3
+!s100 d0?>FW^S4MTFXLg0_^N:?3
+R7
+32
+R8
+!i10b 1
+R9
+R22
+R23
+!i113 1
+R12
+Etraffic_control
+Z24 w1540136260
+R2
+R3
+R4
+R0
+Z25 8traffic_contrl.vhd
+Z26 Ftraffic_contrl.vhd
+l0
+L22
+VZz;ed^k5h9aPUbnU[;jF:3
+!s100 jQGdg]h??4Bb3hXb^jh?K3
+R7
+32
+R8
+!i10b 1
+R9
+Z27 !s90 -reportprogress|300|traffic_contrl.vhd|
+Z28 !s107 traffic_contrl.vhd|
+!i113 1
+R12
+Alogic
+R2
+R3
+R4
+DEx4 work 15 traffic_control 0 22 Zz;ed^k5h9aPUbnU[;jF:3
+l109
+L87
+VO4CV]:^DzHi:oDh^cagmQ0
+!s100 m]iN<S:0zT4XTeHPh^0h21
+R7
+32
+R8
+!i10b 1
+R9
+R27
+R28
+!i113 1
+R12
+Etraffic_segment_cntrl
+Z29 w1539884000
+R4
+R3
+R2
+R0
+Z30 8traffic_segment_cntrl.vhd
+Z31 Ftraffic_segment_cntrl.vhd
+l0
+L22
+VZ93hjU24bf;<gAoXLWi^d2
+!s100 ]MlL`z2Jic=_3`U^[>Rj43
+R7
+32
+R8
+!i10b 1
+R9
+Z32 !s90 -reportprogress|300|traffic_segment_cntrl.vhd|
+Z33 !s107 traffic_segment_cntrl.vhd|
+!i113 1
+R12
+Alogic
+R4
+R3
+R2
+DEx4 work 21 traffic_segment_cntrl 0 22 Z93hjU24bf;<gAoXLWi^d2
+l50
+L49
+VGb3__LOzA5H:z:Nhe>kmc1
+!s100 7FCgK^]EKeU0?djQza?GR0
+R7
+32
+R8
+!i10b 1
+R9
+R32
+R33
+!i113 1
+R12

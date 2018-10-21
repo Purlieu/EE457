@@ -24,8 +24,8 @@ vcom de1_top.vhd
 vcom de1_top_vhdl_tb.vhd 
 vsim -t ns work.de1_top_lab6_tb
 add wave -height 20 -divider "DE1_top Signals"
-add wave -radix binary /aclr_n
-add wave -radix binary /clk
+add wave -noupdate /aclr_n
+add wave -noupdate /clk
 add wave -noupdate /sw
 add wave -noupdate /key
 add wave -noupdate /hex0
@@ -36,7 +36,7 @@ add wave -noupdate /hex3
 add wave -noupdate -divider {Traffic Controller}
 add wave -noupdate /de1_top_lab6_tb/dut/u6/current_state
 add wave -noupdate /de1_top_lab6_tb/dut/u6/next_state
-add wave -noupdate /de1_top_lab6_tb/dut/u6/count
+add wave -radix binary /de1_top_lab6_tb/dut/u6/count
 add wave -noupdate /de1_top_lab6_tb/dut/u6/state_out
 
 view wave

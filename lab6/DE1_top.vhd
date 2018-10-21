@@ -16,10 +16,9 @@ Port(
 	HEX1		:out	std_logic_vector( 6 downto 0);	
 	HEX2		:out	std_logic_vector( 6 downto 0);	
 	HEX3		:out	std_logic_vector( 6 downto 0);		
-	
-	-- Disable HEX4 and HEX5 as we only need 4 lights for represent traffic lights
-	--HEX4		:out	std_logic_vector( 6 downto 0);
-	--HEX5		:out	std_logic_vector( 6 downto 0); -- left most
+	HEX4		:out	std_logic_vector( 6 downto 0);		
+	HEX5		:out	std_logic_vector( 6 downto 0);		
+	LEDR		:out	std_logic_vector( 9 downto 0);	
 	
 	
 	-- Push Button
@@ -101,13 +100,13 @@ component traffic_control
 		--		  and East and West segments receiving inputs of 0
 		--		+ Used to determine cardinal directions of lights
 		north_south: in std_logic;
-
-		count : in std_logic; 
+		
 		-- **count**
 		--		+ std_logic where '1' is equivalent to 1 second when the clk reaches
 		--		  50Mhz
 		--		+ Used to determine if a second has passed
-		
+		count : in std_logic; 
+
 		-- Declare output control signals "state_out"
 		
 		-- *state_out**
@@ -214,6 +213,7 @@ begin
 		-- State goign from controller to segments
 		state_out => input_state
 		);
+		
 end;
 
 
