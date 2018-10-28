@@ -1,0 +1,31 @@
+Library ieee;
+use ieee.std_logic.all;
+ 
+ 
+Entity toggler is
+Port( 
+	clk, rst: in std_logic;
+   y_out   : out std_logic
+   );
+end toggler;
+ 
+ 
+architecture logic of toggler is
+	signal y_reg, y_next: std_logic;
+ 
+begin
+Process(clk, rst)
+begin
+	If(rst=‘1’) then
+		y_reg <= ‘0’;
+	elsif(clk=‘1’ and clk’event) then
+		y_reg <= y_next;
+	end if;
+ 
+end process;
+ 
+y_next <= not y_reg;
+ 
+y_out <= y_reg;
+ 
+end architecture;

@@ -22,9 +22,9 @@ VQ<9`7^gc;7U62J;k2a@af2
 !s100 Mb6JkCikZC@o=C=`dnaW[2
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1540136275
+Z8 !s110 1540227344
 !i10b 1
-Z9 !s108 1540136275.000000
+Z9 !s108 1540227344.000000
 Z10 !s90 -reportprogress|300|de1_top.vhd|
 Z11 !s107 de1_top.vhd|
 !i113 1
@@ -48,7 +48,7 @@ R11
 !i113 1
 R12
 Ede1_top_lab6_tb
-Z13 w1540135940
+Z13 w1540227339
 R2
 R3
 R4
@@ -72,11 +72,11 @@ Abehav
 R2
 R3
 R4
-DEx4 work 15 de1_top_lab6_tb 0 22 DHo_nN]hR@:6O>c`WE_PS0
+Z18 DEx4 work 15 de1_top_lab6_tb 0 22 DHo_nN]hR@:6O>c`WE_PS0
 l45
 L8
-VAL?JEDLdT7>o8k9ze0Q631
-Z18 !s100 T5SI]W:a7FP=`RLa`MZXc0
+Z19 VAL?JEDLdT7>o8k9ze0Q631
+Z20 !s100 T5SI]W:a7FP=`RLa`MZXc0
 R7
 32
 R8
@@ -87,13 +87,13 @@ R17
 !i113 1
 R12
 Egen_counter
-Z19 w1540091828
+Z21 w1540091828
 R2
 R3
 R4
 R0
-Z20 8counter.vhd
-Z21 Fcounter.vhd
+Z22 8counter.vhd
+Z23 Fcounter.vhd
 l0
 L5
 Vdn<WOoajlVeELEdWB3Fi90
@@ -103,8 +103,8 @@ R7
 R8
 !i10b 1
 R9
-Z22 !s90 -reportprogress|300|counter.vhd|
-Z23 !s107 counter.vhd|
+Z24 !s90 -reportprogress|300|counter.vhd|
+Z25 !s107 counter.vhd|
 !i113 1
 R12
 Artl
@@ -121,18 +121,18 @@ R7
 R8
 !i10b 1
 R9
-R22
-R23
+R24
+R25
 !i113 1
 R12
 Etraffic_control
-Z24 w1540136260
+Z26 w1540136853
 R2
 R3
 R4
 R0
-Z25 8traffic_contrl.vhd
-Z26 Ftraffic_contrl.vhd
+Z27 8traffic_contrl.vhd
+Z28 Ftraffic_contrl.vhd
 l0
 L22
 VZz;ed^k5h9aPUbnU[;jF:3
@@ -142,8 +142,8 @@ R7
 R8
 !i10b 1
 R9
-Z27 !s90 -reportprogress|300|traffic_contrl.vhd|
-Z28 !s107 traffic_contrl.vhd|
+Z29 !s90 -reportprogress|300|traffic_contrl.vhd|
+Z30 !s107 traffic_contrl.vhd|
 !i113 1
 R12
 Alogic
@@ -153,25 +153,25 @@ R4
 DEx4 work 15 traffic_control 0 22 Zz;ed^k5h9aPUbnU[;jF:3
 l109
 L87
-VO4CV]:^DzHi:oDh^cagmQ0
-!s100 m]iN<S:0zT4XTeHPh^0h21
+VGa_nB0b1I1YGE;AM7H@E71
+!s100 8C<6ZBBBAaM=J3;S5h3X=1
 R7
 32
 R8
 !i10b 1
 R9
-R27
-R28
+R29
+R30
 !i113 1
 R12
 Etraffic_segment_cntrl
-Z29 w1539884000
+Z31 w1539884000
 R4
 R3
 R2
 R0
-Z30 8traffic_segment_cntrl.vhd
-Z31 Ftraffic_segment_cntrl.vhd
+Z32 8traffic_segment_cntrl.vhd
+Z33 Ftraffic_segment_cntrl.vhd
 l0
 L22
 VZ93hjU24bf;<gAoXLWi^d2
@@ -181,8 +181,8 @@ R7
 R8
 !i10b 1
 R9
-Z32 !s90 -reportprogress|300|traffic_segment_cntrl.vhd|
-Z33 !s107 traffic_segment_cntrl.vhd|
+Z34 !s90 -reportprogress|300|traffic_segment_cntrl.vhd|
+Z35 !s107 traffic_segment_cntrl.vhd|
 !i113 1
 R12
 Alogic
@@ -199,7 +199,7 @@ R7
 R8
 !i10b 1
 R9
-R32
-R33
+R34
+R35
 !i113 1
 R12

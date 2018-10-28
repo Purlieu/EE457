@@ -66,7 +66,7 @@ begin
 		key <= "1111";
 		sw <= "0000000000"; -- No-Night-Mode / No Weight
 
-		wait for 8*clk_cycle;\
+		wait for 8*clk_cycle;
 		sw <= "0000000001"; -- No-Night / Weighted NS
 
 		wait for 8*clk_cycle;

@@ -1,0 +1,50 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+entity clock_divider is 
+	port(
+		count : in std_logic(27 downto 0);
+		count_out_hundredths : out std_logic_vector(6 downto 0);
+		count_out_tenths : out std_logic_vector(6 downto 0);
+		count_out_seconds : out std_logic_vector(6 downto 0);
+		count_out_ten_seconds : out std_logic_vector(6 downto 0)
+		
+		);
+end entity clock_divider;
+
+architecture logic of clock_divider is
+	variable count_hundredths unsigned(9 downto 0) := 0;
+	variable count_tenths unsigned(9 downto 0) := 0;
+	variable count_one_second unsigned(9 downto 0) := 0;
+	variable count_ten_seconds unsigned(9 downto 0) := 0;
+
+begin
+	process(clk, count)
+	if(count_hundredths > 9) then
+		count_hundredths <= 0;
+	if(count_tenths > 9) then
+		count_tenths <= 0;
+	if(count_one_second > 9) then
+		count_one_second <= 0;
+	if(count_ten_seconds > 9) then
+		count_ten_seconds <= 0;
+	-- 10 Seconds 		500
+		if count = "0000000000000000000111110100" then
+			count_ten_seconds <= count_ten_seconds + 1;
+			count_out_ten_seconds <= count_ten_seconds;
+	-- 1 second 		5000
+		elsif count = "0000000000000001001110001000" then
+			count_one_second <= count_one_second + 1;
+			count_out_seconds <= count_one_second;
+	-- tenths seconds 50000
+		elsif count = "0000000000001100001101010000" then
+			count_tenths <= count_tenths + 1
+			count_out_tenths <= count_tenths;
+	-- hundred second 500000
+		elsif count = "0000000001111010000100100000" then
+			count_hundredths <= count_hundredths + 1;
+			count_out_hundredths <= count_hundredths
+		end if;
+	end process;
+end logic;

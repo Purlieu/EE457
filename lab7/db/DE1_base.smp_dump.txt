@@ -1,0 +1,24 @@
+
+State Machine - |DE1_top|seconds_controller:u9|current_state
+Name current_state.stopped current_state.running current_state.idle 
+current_state.idle 0 0 0 
+current_state.running 0 1 1 
+current_state.stopped 1 0 1 
+
+State Machine - |DE1_top|seconds_controller:u8|current_state
+Name current_state.stopped current_state.running current_state.idle 
+current_state.idle 0 0 0 
+current_state.running 0 1 1 
+current_state.stopped 1 0 1 
+
+State Machine - |DE1_top|seconds_controller:u7|current_state
+Name current_state.stopped current_state.running current_state.idle 
+current_state.idle 0 0 0 
+current_state.running 0 1 1 
+current_state.stopped 1 0 1 
+
+State Machine - |DE1_top|seconds_controller:u6|current_state
+Name current_state.stopped current_state.running current_state.idle 
+current_state.idle 0 0 0 
+current_state.running 0 1 1 
+current_state.stopped 1 0 1 

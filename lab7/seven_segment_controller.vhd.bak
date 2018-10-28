@@ -1,0 +1,10 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+entity seven_segment_controller is
+port (
+	input : in std_logic_vector(3 downto 0);
+	output : out std_logic_vector(6 downto 0)
+);
+end entity seven_segment_controller;

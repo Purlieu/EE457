@@ -1,0 +1,9 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+entity reflex_controller is 
+port (
+	clk : in std_logic;
+	reset_a : in std_logic;
+	
