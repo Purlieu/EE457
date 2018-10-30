@@ -116,7 +116,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "clock_50",
+					"name" : "LEDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
 					"strict" : false
 				},
 				{
@@ -124,7 +128,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "KEY[0]",
+					"name" : "clock_50",
 					"strict" : false
 				}
 			]

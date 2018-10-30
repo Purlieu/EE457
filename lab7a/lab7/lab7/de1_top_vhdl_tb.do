@@ -44,6 +44,11 @@ add wave -noupdate /de1_top_lab7_tb/dut/u2/tenths_out
 add wave -noupdate /de1_top_lab7_tb/dut/u2/seconds_out
 add wave -noupdate /de1_top_lab7_tb/dut/u2/ten_seconds_out
 add wave -noupdate /de1_top_lab7_tb/dut/u2/is_running
+add wave -noupdate /de1_top_lab7_tb/dut/u2/total
+add wave -noupdate /de1_top_lab7_tb/dut/u2/hold_val
+add wave -noupdate /de1_top_lab7_tb/dut/u2/total
+add wave -noupdate /de1_top_lab7_tb/dut/u2/result_completed
+
 
 
 view wave

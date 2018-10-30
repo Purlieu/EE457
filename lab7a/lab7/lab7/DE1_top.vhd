@@ -78,6 +78,8 @@ port(
 	seconds_out : out integer;
 	ten_seconds_out : out integer;
 	reset_out : out std_logic;
+	total_in : in integer;
+	total_out : out integer;
 	LED_out : out std_logic
 	);
 end component stopwatch;
@@ -93,11 +95,13 @@ end component stopwatch;
 	signal tenths : integer ;
 	signal seconds : integer ;
 	signal ten_seconds : integer ;
-
+	signal total : integer;
+		
 begin
 start_n <= not KEY(0);
 stop_n <= not KEY(1);
-
+HEX4 <= "1111111";
+HEX5 <= "1111111";
 	u1:gen_counter
 	generic map (wide => 29, max => hundredths)
 	port map(
@@ -119,6 +123,8 @@ stop_n <= not KEY(1);
 		tenths_out => tenths,
 		seconds_out => seconds,
 		ten_seconds_out => ten_seconds,
+		total_in => total,
+		total_out => total,
 		reset_out => reset,
 		LED_out => LEDR(0)	
 	);

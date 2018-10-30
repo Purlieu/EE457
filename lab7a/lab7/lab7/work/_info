@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab7a/lab7/lab7
 Ede1_top
-Z1 w1540881251
+Z1 w1540920390
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
@@ -22,9 +22,9 @@ V0iHWLC<QCM@4<5bDLhVKh2
 !s100 `>76^;E@Y_z^0MHIh=ndQ0
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1540883260
+Z8 !s110 1540938937
 !i10b 1
-Z9 !s108 1540883260.000000
+Z9 !s108 1540938937.000000
 Z10 !s90 -reportprogress|300|de1_top.vhd|
 Z11 !s107 de1_top.vhd|
 !i113 1
@@ -34,10 +34,10 @@ R2
 R3
 R4
 DEx4 work 7 de1_top 0 22 0iHWLC<QCM@4<5bDLhVKh2
-l97
+l100
 L42
-V_2[BC8mcj@aOl2QE2doCm1
-!s100 2Ki3CID=Kd^GbDj[SaB[d3
+VH]?RJKFa0cRGI4CT_ho:_0
+!s100 KAYd8zaH?3mMK4XS:?obB2
 R7
 32
 R8
@@ -100,9 +100,9 @@ Vdn<WOoajlVeELEdWB3Fi90
 !s100 o>2laMaBGEW5WGg86=Rn:0
 R7
 32
-Z24 !s110 1540883259
+Z24 !s110 1540938936
 !i10b 1
-Z25 !s108 1540883259.000000
+Z25 !s108 1540938936.000000
 Z26 !s90 -reportprogress|300|counter.vhd|
 Z27 !s107 counter.vhd|
 !i113 1
@@ -139,7 +139,7 @@ V6X^[Qh0Rdd@j6PzWo]3cD0
 !s100 5RTQm6E<FE=LRA]zQT?YW1
 R7
 32
-R24
+R8
 !i10b 1
 R25
 Z30 !s90 -reportprogress|300|seven_segment_controller.vhd|
@@ -157,7 +157,7 @@ VH;ni6SlHf1?bi0WJNS6DC3
 !s100 P]X@EXK1V?C>6_?8Waofn1
 R7
 32
-R24
+R8
 !i10b 1
 R25
 R30
@@ -165,41 +165,43 @@ R31
 !i113 1
 R12
 Estopwatch
-Z32 w1540883254
+Z32 w1540938928
+Z33 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
 R2
 R3
 R4
 R0
-Z33 8stopwatch.vhd
-Z34 Fstopwatch.vhd
+Z34 8stopwatch.vhd
+Z35 Fstopwatch.vhd
 l0
-L5
-V73=9_6RUkVoGg^T[Dg>TH3
-!s100 ^JH0INV2]Ai0S[h1VB8^G0
+L6
+VK`jPzNG^>AzDin<K1CloX1
+!s100 Zof5J>lH[9RG0<a`U9oSj2
 R7
 32
 R24
 !i10b 1
 R25
-Z35 !s90 -reportprogress|300|stopwatch.vhd|
-Z36 !s107 stopwatch.vhd|
+Z36 !s90 -reportprogress|300|stopwatch.vhd|
+Z37 !s107 stopwatch.vhd|
 !i113 1
 R12
 Alogic
+R33
 R2
 R3
 R4
-DEx4 work 9 stopwatch 0 22 73=9_6RUkVoGg^T[Dg>TH3
-l35
-L20
-VnNYmoKSnBjl3ec4XWA]KS0
-!s100 o_2XkKM4bmAC?0?10`>jj3
+DEx4 work 9 stopwatch 0 22 K`jPzNG^>AzDin<K1CloX1
+l48
+L23
+Vc6O635Q_Kli81BkJ69CS]3
+!s100 d:NA8=kT1D]]9MI^CWl_V2
 R7
 32
 R24
 !i10b 1
 R25
-R35
 R36
+R37
 !i113 1
 R12
