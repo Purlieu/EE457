@@ -1,0 +1,36 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+entity delay is
+	clk : in std_logic;
+	count : in std_logic;
+	start_in : in std_logic;
+	start_out : out std_logic;
+	
+end entity delay;
+
+architecture logic of delay is
+	signal start_wait : std_logic;
+begin
+	process(clk, count)
+		if rising_edge(clk) then
+			if count = '1' and start_wait = '1' then
+				start_out <= '1';
+			else
+				start_out <= '0';
+			end if;
+		end if;
+	end process;
+	
+begin
+	process(start_in)
+		if start_in = '1' then
+			start_wait <= '1';
+		else
+			start_wait <= '0';
+		end if;
+	end process;
+
+	end logic;
+

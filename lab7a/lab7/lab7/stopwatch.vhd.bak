@@ -1,0 +1,16 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+entity stopwatch is
+port(
+	clk : in std_logic;
+	count : in std_logic;
+	start : in std_logic;
+	stop : in std_logic;
+	hundreds_out : out std_logic_vector(7 downto 0);
+	tenths_out : out std_logic_vector(7 downto 0);
+	seconds_out : out std_logic_vector(7 downto 0);
+	ten_seconds_out : out std_logic_vector(7 downto 0);
+	reset_out : out std_logic
+	);

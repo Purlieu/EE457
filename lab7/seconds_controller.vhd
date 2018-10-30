@@ -28,7 +28,8 @@ begin
 		if rising_edge(clk) then
 			reset <= '0';
 			if count = '1' and is_running = '1' then
-					if(counter = 9) then
+				count_out <= counter;
+					if(counter = 10) then
 						counter <= 0;
 						reset <= '1';
 					else
@@ -36,7 +37,6 @@ begin
 					end if;
 				end if;
 			current_state <= next_state;
-			count_out <= counter;
 		end if;
 	end process;
 	

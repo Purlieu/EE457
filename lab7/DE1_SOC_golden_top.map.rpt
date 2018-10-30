@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SOC_golden_top
-Sun Oct 28 14:21:34 2018
+Mon Oct 29 21:56:43 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -56,7 +56,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Oct 28 14:21:33 2018       ;
+; Analysis & Synthesis Status     ; Successful - Mon Oct 29 21:56:43 2018       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SOC_golden_top                          ;
 ; Top-level Entity Name           ; DE1_top                                     ;
@@ -214,8 +214,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; clock_50~input ;
 ; Maximum fan-out                             ; 364            ;
-; Total fan-out                               ; 2293           ;
-; Average fan-out                             ; 2.72           ;
+; Total fan-out                               ; 2421           ;
+; Average fan-out                             ; 2.88           ;
 +---------------------------------------------+----------------+
 
 
@@ -317,7 +317,7 @@ Encoding Type:  One-Hot
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 101   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 128   ;
+; Number of registers using Clock Enable       ; 256   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -439,8 +439,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; arriav_ff             ; 364                         ;
 ;     CLR               ; 4                           ;
 ;     CLR SCLR          ; 97                          ;
+;     ENA               ; 128                         ;
 ;     ENA SCLR          ; 128                         ;
-;     plain             ; 135                         ;
+;     plain             ; 7                           ;
 ; arriav_lcell_comb     ; 346                         ;
 ;     arith             ; 225                         ;
 ;         1 data inputs ; 225                         ;
@@ -474,7 +475,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sun Oct 28 14:21:23 2018
+    Info: Processing started: Mon Oct 29 21:56:33 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_base -c DE1_SOC_golden_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -558,8 +559,8 @@ Info (21057): Implemented 535 device resources after synthesis - the final resou
     Info (21061): Implemented 468 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 44 warnings
     Info: Peak virtual memory: 4874 megabytes
-    Info: Processing ended: Sun Oct 28 14:21:34 2018
-    Info: Elapsed time: 00:00:11
+    Info: Processing ended: Mon Oct 29 21:56:43 2018
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:21
 
 

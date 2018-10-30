@@ -1,5 +1,5 @@
 Fitter report for DE1_SOC_golden_top
-Sun Oct 28 14:22:08 2018
+Mon Oct 29 21:57:12 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -63,15 +63,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Sun Oct 28 14:22:08 2018       ;
+; Fitter Status                   ; Successful - Mon Oct 29 21:57:12 2018       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SOC_golden_top                          ;
 ; Top-level Entity Name           ; DE1_top                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 200 / 32,070 ( < 1 % )                      ;
-; Total registers                 ; 455                                         ;
+; Logic utilization (in ALMs)     ; 201 / 32,070 ( < 1 % )                      ;
+; Total registers                 ; 459                                         ;
 ; Total pins                      ; 67 / 457 ( 15 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
@@ -159,110 +159,114 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.9%      ;
-;     Processor 3            ;   0.9%      ;
-;     Processor 4            ;   0.8%      ;
+;     Processor 2            ;   1.1%      ;
+;     Processor 3            ;   1.0%      ;
+;     Processor 4            ;   1.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Netlist Optimizations                                                                                                                                                                                                                            ;
-+------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------------------------------+------------------+-----------------------+
-; Node                               ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                             ; Destination Port ; Destination Port Name ;
-+------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------------------------------+------------------+-----------------------+
-; clock_50~inputCLKENA0              ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                              ;                  ;                       ;
-; gen_counter:u1|i_count[0]          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[0]~DUPLICATE          ;                  ;                       ;
-; gen_counter:u1|i_count[11]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[11]~DUPLICATE         ;                  ;                       ;
-; gen_counter:u1|i_count[13]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[13]~DUPLICATE         ;                  ;                       ;
-; gen_counter:u1|i_count[19]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[19]~DUPLICATE         ;                  ;                       ;
-; gen_counter:u1|i_count[21]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[21]~DUPLICATE         ;                  ;                       ;
-; gen_counter:u1|i_count[22]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[22]~DUPLICATE         ;                  ;                       ;
-; gen_counter:u1|i_count[24]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[24]~DUPLICATE         ;                  ;                       ;
-; gen_counter:u1|i_count[26]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[26]~DUPLICATE         ;                  ;                       ;
-; gen_counter:u1|i_count[28]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[28]~DUPLICATE         ;                  ;                       ;
-; gen_counter:u2|i_count[0]          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u2|i_count[0]~DUPLICATE          ;                  ;                       ;
-; gen_counter:u2|i_count[4]          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u2|i_count[4]~DUPLICATE          ;                  ;                       ;
-; gen_counter:u2|i_count[19]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u2|i_count[19]~DUPLICATE         ;                  ;                       ;
-; gen_counter:u3|i_count[4]          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u3|i_count[4]~DUPLICATE          ;                  ;                       ;
-; gen_counter:u3|i_count[12]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u3|i_count[12]~DUPLICATE         ;                  ;                       ;
-; gen_counter:u3|i_count[13]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u3|i_count[13]~DUPLICATE         ;                  ;                       ;
-; gen_counter:u3|i_count[15]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u3|i_count[15]~DUPLICATE         ;                  ;                       ;
-; gen_counter:u3|i_count[16]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u3|i_count[16]~DUPLICATE         ;                  ;                       ;
-; gen_counter:u4|i_count[1]          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u4|i_count[1]~DUPLICATE          ;                  ;                       ;
-; gen_counter:u4|i_count[8]          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u4|i_count[8]~DUPLICATE          ;                  ;                       ;
-; gen_counter:u4|i_count[13]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u4|i_count[13]~DUPLICATE         ;                  ;                       ;
-; gen_counter:u4|i_count[14]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u4|i_count[14]~DUPLICATE         ;                  ;                       ;
-; gen_counter:u4|i_count[17]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u4|i_count[17]~DUPLICATE         ;                  ;                       ;
-; gen_counter:u4|i_count[18]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u4|i_count[18]~DUPLICATE         ;                  ;                       ;
-; seconds_controller:u6|counter[0]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[0]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u6|counter[2]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[2]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u6|counter[3]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[3]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u6|counter[10]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[10]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u6|counter[14]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[14]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u6|counter[17]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[17]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u6|counter[21]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[21]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u6|counter[23]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[23]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u6|counter[24]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[24]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u6|counter[25]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[25]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u6|counter[27]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[27]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u6|counter[28]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[28]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u6|counter[30]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[30]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u6|counter[31]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[31]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u7|count_out[2] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|count_out[2]~DUPLICATE ;                  ;                       ;
-; seconds_controller:u7|count_out[3] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|count_out[3]~DUPLICATE ;                  ;                       ;
-; seconds_controller:u7|counter[1]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[1]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u7|counter[2]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[2]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u7|counter[5]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[5]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u7|counter[6]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[6]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u7|counter[10]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[10]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u7|counter[13]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[13]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u7|counter[15]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[15]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u7|counter[18]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[18]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u7|counter[22]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[22]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u8|count_out[1] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|count_out[1]~DUPLICATE ;                  ;                       ;
-; seconds_controller:u8|counter[1]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[1]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u8|counter[2]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[2]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u8|counter[3]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[3]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u8|counter[4]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[4]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u8|counter[5]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[5]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u8|counter[6]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[6]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u8|counter[7]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[7]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u8|counter[9]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[9]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u8|counter[11]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[11]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u8|counter[12]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[12]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u8|counter[13]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[13]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u8|counter[15]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[15]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u8|counter[16]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[16]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u8|counter[18]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[18]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u8|counter[19]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[19]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u8|counter[21]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[21]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u8|counter[22]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[22]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u8|counter[28]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[28]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u8|counter[29]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[29]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u8|counter[30]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[30]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u8|counter[31]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[31]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u9|counter[0]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[0]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u9|counter[1]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[1]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u9|counter[2]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[2]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u9|counter[3]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[3]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u9|counter[4]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[4]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u9|counter[6]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[6]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u9|counter[7]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[7]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u9|counter[8]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[8]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u9|counter[9]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[9]~DUPLICATE   ;                  ;                       ;
-; seconds_controller:u9|counter[11]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[11]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u9|counter[12]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[12]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u9|counter[15]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[15]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u9|counter[16]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[16]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u9|counter[18]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[18]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u9|counter[19]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[19]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u9|counter[23]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[23]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u9|counter[24]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[24]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u9|counter[26]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[26]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u9|counter[27]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[27]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u9|counter[30]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[30]~DUPLICATE  ;                  ;                       ;
-; seconds_controller:u9|counter[31]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[31]~DUPLICATE  ;                  ;                       ;
-+------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------------------------------+------------------+-----------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Netlist Optimizations                                                                                                                                                                                                                          ;
++-----------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------------------+------------------+-----------------------+
+; Node                              ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                            ; Destination Port ; Destination Port Name ;
++-----------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------------------+------------------+-----------------------+
+; clock_50~inputCLKENA0             ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                             ;                  ;                       ;
+; gen_counter:u1|i_count[2]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[2]~DUPLICATE         ;                  ;                       ;
+; gen_counter:u1|i_count[9]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[9]~DUPLICATE         ;                  ;                       ;
+; gen_counter:u1|i_count[10]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[10]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u1|i_count[11]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[11]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u1|i_count[13]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[13]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u1|i_count[14]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[14]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u1|i_count[15]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[15]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u1|i_count[16]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[16]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u1|i_count[18]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[18]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u1|i_count[21]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[21]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u1|i_count[22]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[22]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u1|i_count[23]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[23]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u1|i_count[24]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[24]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u1|i_count[26]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[26]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u1|i_count[27]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[27]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u1|i_count[28]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u1|i_count[28]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u2|i_count[0]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u2|i_count[0]~DUPLICATE         ;                  ;                       ;
+; gen_counter:u2|i_count[1]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u2|i_count[1]~DUPLICATE         ;                  ;                       ;
+; gen_counter:u2|i_count[10]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u2|i_count[10]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u2|i_count[11]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u2|i_count[11]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u3|i_count[11]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u3|i_count[11]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u3|i_count[19]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u3|i_count[19]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u3|i_count[21]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u3|i_count[21]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u4|i_count[0]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u4|i_count[0]~DUPLICATE         ;                  ;                       ;
+; gen_counter:u4|i_count[3]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u4|i_count[3]~DUPLICATE         ;                  ;                       ;
+; gen_counter:u4|i_count[4]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u4|i_count[4]~DUPLICATE         ;                  ;                       ;
+; gen_counter:u4|i_count[5]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u4|i_count[5]~DUPLICATE         ;                  ;                       ;
+; gen_counter:u4|i_count[6]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u4|i_count[6]~DUPLICATE         ;                  ;                       ;
+; gen_counter:u4|i_count[7]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u4|i_count[7]~DUPLICATE         ;                  ;                       ;
+; gen_counter:u4|i_count[8]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u4|i_count[8]~DUPLICATE         ;                  ;                       ;
+; gen_counter:u4|i_count[11]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u4|i_count[11]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u4|i_count[12]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u4|i_count[12]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u4|i_count[13]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u4|i_count[13]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u4|i_count[14]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u4|i_count[14]~DUPLICATE        ;                  ;                       ;
+; gen_counter:u4|i_count[16]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; gen_counter:u4|i_count[16]~DUPLICATE        ;                  ;                       ;
+; seconds_controller:u6|counter[0]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[0]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u6|counter[1]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[1]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u6|counter[2]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[2]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u6|counter[3]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[3]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u6|counter[4]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[4]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u6|counter[5]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[5]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u6|counter[6]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[6]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u6|counter[7]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[7]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u6|counter[8]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[8]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u6|counter[9]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[9]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u6|counter[11] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[11]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u6|counter[12] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[12]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u6|counter[13] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[13]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u6|counter[14] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[14]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u6|counter[15] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[15]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u6|counter[18] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[18]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u6|counter[19] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[19]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u6|counter[20] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[20]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u6|counter[24] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[24]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u6|counter[26] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[26]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u6|counter[27] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u6|counter[27]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u7|counter[0]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[0]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u7|counter[1]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[1]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u7|counter[2]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[2]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u7|counter[3]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[3]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u7|counter[4]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[4]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u7|counter[5]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[5]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u7|counter[6]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[6]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u7|counter[7]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[7]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u7|counter[8]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[8]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u7|counter[9]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[9]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u7|counter[11] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[11]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u7|counter[12] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[12]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u7|counter[13] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[13]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u7|counter[15] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[15]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u7|counter[16] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[16]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u7|counter[18] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[18]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u7|counter[19] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[19]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u7|counter[22] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[22]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u7|counter[24] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[24]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u7|counter[26] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[26]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u7|counter[28] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[28]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u7|counter[31] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u7|counter[31]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u8|counter[2]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[2]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u8|counter[11] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[11]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u8|counter[14] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[14]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u8|counter[21] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[21]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u8|counter[22] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[22]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u8|counter[24] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[24]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u8|counter[26] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[26]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u8|counter[29] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u8|counter[29]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u9|counter[2]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[2]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u9|counter[6]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[6]~DUPLICATE  ;                  ;                       ;
+; seconds_controller:u9|counter[10] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[10]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u9|counter[16] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[16]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u9|counter[22] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[22]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u9|counter[23] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[23]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u9|counter[27] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[27]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u9|counter[28] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[28]~DUPLICATE ;                  ;                       ;
+; seconds_controller:u9|counter[29] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; seconds_controller:u9|counter[29]~DUPLICATE ;                  ;                       ;
++-----------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------------------+------------------+-----------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
@@ -794,12 +798,12 @@ The pin-out file can be found in C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Ale
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 200 / 32,070       ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 200                ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 238 / 32,070       ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 132                ;       ;
-;         [b] ALMs used for LUT logic                         ; 55                 ;       ;
-;         [c] ALMs used for registers                         ; 51                 ;       ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 201 / 32,070       ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 201                ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 239 / 32,070       ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 139                ;       ;
+;         [b] ALMs used for LUT logic                         ; 56                 ;       ;
+;         [c] ALMs used for registers                         ; 44                 ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
 ;     [B] Estimate of ALMs recoverable by dense packing       ; 38 / 32,070        ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32,070         ; 0 %   ;
@@ -810,8 +814,8 @@ The pin-out file can be found in C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Ale
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 33 / 3,207         ; 1 %   ;
-;     -- Logic LABs                                           ; 33                 ;       ;
+; Total LABs:  partially or completely used                   ; 37 / 3,207         ; 1 %   ;
+;     -- Logic LABs                                           ; 37                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Combinational ALUT usage for logic                          ; 345                ;       ;
@@ -820,15 +824,15 @@ The pin-out file can be found in C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Ale
 ;     -- 5 input functions                                    ; 39                 ;       ;
 ;     -- 4 input functions                                    ; 5                  ;       ;
 ;     -- <=3 input functions                                  ; 248                ;       ;
-; Combinational ALUT usage for route-throughs                 ; 18                 ;       ;
+; Combinational ALUT usage for route-throughs                 ; 16                 ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 455                ;       ;
+; Dedicated logic registers                                   ; 459                ;       ;
 ;     -- By type:                                             ;                    ;       ;
 ;         -- Primary logic registers                          ; 364 / 64,140       ; < 1 % ;
-;         -- Secondary logic registers                        ; 91 / 64,140        ; < 1 % ;
+;         -- Secondary logic registers                        ; 95 / 64,140        ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
 ;         -- Design implementation registers                  ; 364                ;       ;
-;         -- Routing optimization registers                   ; 91                 ;       ;
+;         -- Routing optimization registers                   ; 95                 ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 67 / 457           ; 15 %  ;
@@ -884,11 +888,11 @@ The pin-out file can be found in C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Ale
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 1.0% / 1.0% / 0.9% ;       ;
-; Maximum fan-out                                             ; 455                ;       ;
-; Highest non-global fan-out                                  ; 54                 ;       ;
-; Total fan-out                                               ; 2670               ;       ;
-; Average fan-out                                             ; 2.80               ;       ;
+; Peak interconnect usage (total/H/V)                         ; 1.2% / 1.3% / 1.2% ;       ;
+; Maximum fan-out                                             ; 459                ;       ;
+; Highest non-global fan-out                                  ; 86                 ;       ;
+; Total fan-out                                               ; 2818               ;       ;
+; Average fan-out                                             ; 2.95               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -897,12 +901,12 @@ The pin-out file can be found in C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Ale
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Statistic                                                   ; Top                   ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+-----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 200 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 200                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 238 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 132                   ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 55                    ; 0                              ;
-;         [c] ALMs used for registers                         ; 51                    ; 0                              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 201 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 201                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 239 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 139                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 56                    ; 0                              ;
+;         [c] ALMs used for registers                         ; 44                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
 ;     [B] Estimate of ALMs recoverable by dense packing       ; 38 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32070 ( 0 % )     ; 0 / 32070 ( 0 % )              ;
@@ -913,8 +917,8 @@ The pin-out file can be found in C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Ale
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 33 / 3207 ( 1 % )     ; 0 / 3207 ( 0 % )               ;
-;     -- Logic LABs                                           ; 33                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 37 / 3207 ( 1 % )     ; 0 / 3207 ( 0 % )               ;
+;     -- Logic LABs                                           ; 37                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Combinational ALUT usage for logic                          ; 345                   ; 0                              ;
@@ -923,7 +927,7 @@ The pin-out file can be found in C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Ale
 ;     -- 5 input functions                                    ; 39                    ; 0                              ;
 ;     -- 4 input functions                                    ; 5                     ; 0                              ;
 ;     -- <=3 input functions                                  ; 248                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 18                    ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 16                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
@@ -931,10 +935,10 @@ The pin-out file can be found in C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Ale
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
 ;         -- Primary logic registers                          ; 364 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 91 / 64140 ( < 1 % )  ; 0 / 64140 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 95 / 64140 ( < 1 % )  ; 0 / 64140 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
 ;         -- Design implementation registers                  ; 364                   ; 0                              ;
-;         -- Routing optimization registers                   ; 91                    ; 0                              ;
+;         -- Routing optimization registers                   ; 95                    ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
@@ -951,8 +955,8 @@ The pin-out file can be found in C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Ale
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 2670                  ; 0                              ;
-;     -- Registered Connections                               ; 950                   ; 0                              ;
+;     -- Total Connections                                    ; 2818                  ; 0                              ;
+;     -- Registered Connections                               ; 959                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
 ;     -- Top                                                  ; 0                     ; 0                              ;
@@ -998,7 +1002,7 @@ The pin-out file can be found in C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Ale
 ; SW[7]    ; AC9   ; 3A       ; 4            ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; SW[8]    ; AD10  ; 3A       ; 4            ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; SW[9]    ; AE12  ; 3A       ; 2            ; 0            ; 57           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
-; clock_50 ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 455                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; clock_50 ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 459                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -2054,19 +2058,19 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-----------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------+--------------------------+--------------+
 ; Compilation Hierarchy Node        ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                   ; Entity Name              ; Library Name ;
 +-----------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------+--------------------------+--------------+
-; |DE1_top                          ; 200.0 (0.5)          ; 236.5 (0.5)                      ; 36.5 (0.0)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 345 (1)             ; 455 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 67   ; 0            ; |DE1_top                              ; DE1_top                  ; work         ;
-;    |gen_counter:u1|               ; 20.2 (20.2)          ; 20.5 (20.5)                      ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 35 (35)             ; 39 (39)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|gen_counter:u1               ; gen_counter              ; work         ;
-;    |gen_counter:u2|               ; 18.0 (18.0)          ; 18.5 (18.5)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 31 (31)             ; 30 (30)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|gen_counter:u2               ; gen_counter              ; work         ;
-;    |gen_counter:u3|               ; 15.7 (15.7)          ; 16.5 (16.5)                      ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 28 (28)             ; 29 (29)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|gen_counter:u3               ; gen_counter              ; work         ;
-;    |gen_counter:u4|               ; 12.7 (12.7)          ; 18.0 (18.0)                      ; 5.3 (5.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (23)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|gen_counter:u4               ; gen_counter              ; work         ;
-;    |seconds_controller:u6|        ; 28.5 (28.5)          ; 33.8 (33.8)                      ; 5.2 (5.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 46 (46)             ; 82 (82)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|seconds_controller:u6        ; seconds_controller       ; work         ;
-;    |seconds_controller:u7|        ; 27.3 (27.3)          ; 32.0 (32.0)                      ; 4.7 (4.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 43 (43)             ; 76 (76)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|seconds_controller:u7        ; seconds_controller       ; work         ;
-;    |seconds_controller:u8|        ; 27.0 (27.0)          ; 34.5 (34.5)                      ; 7.5 (7.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 43 (43)             ; 87 (87)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|seconds_controller:u8        ; seconds_controller       ; work         ;
-;    |seconds_controller:u9|        ; 27.2 (27.2)          ; 31.2 (31.2)                      ; 4.0 (4.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 43 (43)             ; 86 (86)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|seconds_controller:u9        ; seconds_controller       ; work         ;
-;    |seven_segment_controller:u10| ; 5.7 (5.7)            ; 9.8 (9.8)                        ; 4.2 (4.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (13)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|seven_segment_controller:u10 ; seven_segment_controller ; work         ;
-;    |seven_segment_controller:u11| ; 5.8 (5.8)            ; 7.0 (7.0)                        ; 1.2 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (13)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|seven_segment_controller:u11 ; seven_segment_controller ; work         ;
-;    |seven_segment_controller:u12| ; 5.7 (5.7)            ; 7.5 (7.5)                        ; 1.8 (1.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (13)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|seven_segment_controller:u12 ; seven_segment_controller ; work         ;
-;    |seven_segment_controller:u13| ; 5.8 (5.8)            ; 6.8 (6.8)                        ; 0.9 (0.9)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (13)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|seven_segment_controller:u13 ; seven_segment_controller ; work         ;
+; |DE1_top                          ; 200.5 (0.5)          ; 237.5 (0.5)                      ; 37.0 (0.0)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 345 (1)             ; 459 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 67   ; 0            ; |DE1_top                              ; DE1_top                  ; work         ;
+;    |gen_counter:u1|               ; 20.2 (20.2)          ; 21.0 (21.0)                      ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 35 (35)             ; 46 (46)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|gen_counter:u1               ; gen_counter              ; work         ;
+;    |gen_counter:u2|               ; 17.5 (17.5)          ; 17.5 (17.5)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 31 (31)             ; 31 (31)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|gen_counter:u2               ; gen_counter              ; work         ;
+;    |gen_counter:u3|               ; 16.2 (16.2)          ; 16.7 (16.7)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 28 (28)             ; 27 (27)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|gen_counter:u3               ; gen_counter              ; work         ;
+;    |gen_counter:u4|               ; 12.3 (12.3)          ; 13.3 (13.3)                      ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (23)             ; 32 (32)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|gen_counter:u4               ; gen_counter              ; work         ;
+;    |seconds_controller:u6|        ; 28.7 (28.7)          ; 32.0 (32.0)                      ; 3.3 (3.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 46 (46)             ; 89 (89)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|seconds_controller:u6        ; seconds_controller       ; work         ;
+;    |seconds_controller:u7|        ; 27.3 (27.3)          ; 34.6 (34.6)                      ; 7.3 (7.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 43 (43)             ; 87 (87)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|seconds_controller:u7        ; seconds_controller       ; work         ;
+;    |seconds_controller:u8|        ; 27.2 (27.2)          ; 32.4 (32.4)                      ; 5.2 (5.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 43 (43)             ; 73 (73)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|seconds_controller:u8        ; seconds_controller       ; work         ;
+;    |seconds_controller:u9|        ; 27.5 (27.5)          ; 34.2 (34.2)                      ; 6.7 (6.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 43 (43)             ; 74 (74)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|seconds_controller:u9        ; seconds_controller       ; work         ;
+;    |seven_segment_controller:u10| ; 5.7 (5.7)            ; 9.0 (9.0)                        ; 3.3 (3.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (13)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|seven_segment_controller:u10 ; seven_segment_controller ; work         ;
+;    |seven_segment_controller:u11| ; 5.7 (5.7)            ; 9.9 (9.9)                        ; 4.3 (4.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (13)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|seven_segment_controller:u11 ; seven_segment_controller ; work         ;
+;    |seven_segment_controller:u12| ; 5.8 (5.8)            ; 6.4 (6.4)                        ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (13)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|seven_segment_controller:u12 ; seven_segment_controller ; work         ;
+;    |seven_segment_controller:u13| ; 5.7 (5.7)            ; 10.0 (10.0)                      ; 4.3 (4.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (13)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DE1_top|seven_segment_controller:u13 ; seven_segment_controller ; work         ;
 +-----------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -2141,7 +2145,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SW[8]    ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; SW[9]    ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; clock_50 ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; KEY[1]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; KEY[1]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; KEY[0]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +----------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
@@ -2165,8 +2169,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SW[9]                                             ;                   ;         ;
 ; clock_50                                          ;                   ;         ;
 ; KEY[1]                                            ;                   ;         ;
-;      - seconds_controller:u6|Selector1~0          ; 0                 ; 0       ;
-;      - seconds_controller:u6|next_state.stopped~0 ; 0                 ; 0       ;
+;      - seconds_controller:u6|Selector1~0          ; 1                 ; 0       ;
+;      - seconds_controller:u6|next_state.stopped~0 ; 1                 ; 0       ;
 ; KEY[0]                                            ;                   ;         ;
 ;      - seconds_controller:u6|Selector1~0          ; 0                 ; 0       ;
 ;      - seconds_controller:u6|Selector0~0          ; 0                 ; 0       ;
@@ -2178,23 +2182,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                              ; Location            ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; clock_50                          ; PIN_AF14            ; 455     ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; gen_counter:u1|Equal0~5           ; LABCELL_X64_Y15_N12 ; 39      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; gen_counter:u2|Equal0~4           ; LABCELL_X85_Y19_N21 ; 30      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; gen_counter:u3|Equal0~4           ; LABCELL_X73_Y12_N42 ; 29      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; gen_counter:u4|Equal0~3           ; LABCELL_X35_Y14_N51 ; 26      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; seconds_controller:u6|Equal0~6    ; LABCELL_X74_Y16_N6  ; 47      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; seconds_controller:u6|process_0~0 ; LABCELL_X68_Y15_N30 ; 46      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; seconds_controller:u6|reset       ; FF_X63_Y14_N56      ; 39      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; seconds_controller:u7|Equal0~6    ; LABCELL_X85_Y20_N42 ; 42      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; seconds_controller:u7|process_0~0 ; LABCELL_X85_Y19_N24 ; 41      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; seconds_controller:u7|reset       ; FF_X85_Y19_N14      ; 30      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; seconds_controller:u8|Equal0~6    ; LABCELL_X74_Y11_N6  ; 54      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; seconds_controller:u8|process_0~0 ; LABCELL_X73_Y13_N27 ; 53      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; seconds_controller:u8|reset       ; FF_X73_Y13_N20      ; 29      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; seconds_controller:u9|Equal0~6    ; LABCELL_X37_Y15_N33 ; 54      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; seconds_controller:u9|process_0~0 ; LABCELL_X37_Y15_N6  ; 53      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; seconds_controller:u9|reset       ; FF_X35_Y14_N2       ; 26      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; clock_50                          ; PIN_AF14            ; 459     ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; gen_counter:u1|Equal0~5           ; LABCELL_X51_Y23_N36 ; 46      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; gen_counter:u2|Equal0~4           ; LABCELL_X81_Y19_N6  ; 31      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; gen_counter:u3|Equal0~4           ; LABCELL_X81_Y11_N0  ; 27      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; gen_counter:u4|Equal0~3           ; LABCELL_X30_Y23_N18 ; 32      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; seconds_controller:u6|Equal0~6    ; LABCELL_X64_Y21_N30 ; 54      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; seconds_controller:u6|process_0~0 ; LABCELL_X64_Y21_N42 ; 85      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; seconds_controller:u6|reset       ; FF_X51_Y23_N59      ; 46      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; seconds_controller:u7|Equal0~6    ; LABCELL_X83_Y19_N18 ; 55      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; seconds_controller:u7|process_0~0 ; LABCELL_X81_Y19_N21 ; 86      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; seconds_controller:u7|reset       ; FF_X80_Y18_N53      ; 31      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; seconds_controller:u8|Equal0~6    ; LABCELL_X81_Y12_N30 ; 41      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; seconds_controller:u8|process_0~0 ; LABCELL_X81_Y12_N24 ; 72      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; seconds_controller:u8|reset       ; FF_X82_Y10_N59      ; 27      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; seconds_controller:u9|Equal0~6    ; LABCELL_X31_Y23_N39 ; 42      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; seconds_controller:u9|process_0~0 ; LABCELL_X31_Y22_N36 ; 73      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; seconds_controller:u9|reset       ; FF_X30_Y23_N5       ; 32      ; Async. clear ; no     ; --                   ; --               ; --                        ;
 +-----------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -2203,7 +2207,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------+----------------------+------------------+---------------------------+
 ; Name     ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
-; clock_50 ; PIN_AF14 ; 455     ; Global Clock         ; GCLK6            ; --                        ;
+; clock_50 ; PIN_AF14 ; 459     ; Global Clock         ; GCLK6            ; --                        ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -2212,14 +2216,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 439 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 5 / 13,420 ( < 1 % )    ;
-; C2 interconnects                            ; 104 / 119,108 ( < 1 % ) ;
-; C4 interconnects                            ; 52 / 56,300 ( < 1 % )   ;
+; Block interconnects                         ; 487 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 7 / 13,420 ( < 1 % )    ;
+; C2 interconnects                            ; 109 / 119,108 ( < 1 % ) ;
+; C4 interconnects                            ; 87 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 186 / 289,320 ( < 1 % ) ;
+; Direct links                                ; 196 / 289,320 ( < 1 % ) ;
 ; Global clocks                               ; 1 / 16 ( 6 % )          ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -2275,12 +2279,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 293 / 84,580 ( < 1 % )  ;
+; Local interconnects                         ; 271 / 84,580 ( < 1 % )  ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
-; R14 interconnects                           ; 29 / 12,676 ( < 1 % )   ;
-; R14/C12 interconnect drivers                ; 31 / 20,720 ( < 1 % )   ;
-; R3 interconnects                            ; 129 / 130,992 ( < 1 % ) ;
-; R6 interconnects                            ; 156 / 266,960 ( < 1 % ) ;
+; R14 interconnects                           ; 38 / 12,676 ( < 1 % )   ;
+; R14/C12 interconnect drivers                ; 42 / 20,720 ( < 1 % )   ;
+; R3 interconnects                            ; 134 / 130,992 ( < 1 % ) ;
+; R6 interconnects                            ; 191 / 266,960 ( < 1 % ) ;
 ; Spine clocks                                ; 4 / 360 ( 1 % )         ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
@@ -2462,7 +2466,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; clock_50        ; clock_50             ; 3.8               ;
+; clock_50        ; clock_50             ; 3.2               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -2473,51 +2477,106 @@ This will disable optimization of problematic paths and expose them for further 
 +---------------------------------------------+---------------------------------------------+-------------------+
 ; Source Register                             ; Destination Register                        ; Delay Added in ns ;
 +---------------------------------------------+---------------------------------------------+-------------------+
-; seconds_controller:u9|counter[31]           ; seconds_controller:u9|count_out[31]         ; 0.324             ;
-; gen_counter:u4|term                         ; seconds_controller:u9|reset                 ; 0.317             ;
-; seconds_controller:u6|counter[31]           ; seconds_controller:u6|count_out[31]         ; 0.298             ;
-; seconds_controller:u6|current_state.idle    ; seconds_controller:u6|current_state.running ; 0.291             ;
-; seconds_controller:u6|current_state.stopped ; seconds_controller:u6|current_state.idle    ; 0.283             ;
-; seconds_controller:u6|current_state.running ; seconds_controller:u6|current_state.stopped ; 0.273             ;
-; gen_counter:u2|term                         ; seconds_controller:u7|reset                 ; 0.267             ;
-; seconds_controller:u9|counter[0]            ; seconds_controller:u9|count_out[0]          ; 0.236             ;
-; seconds_controller:u8|counter[0]            ; seconds_controller:u8|count_out[0]          ; 0.226             ;
-; gen_counter:u4|i_count[18]                  ; gen_counter:u4|term                         ; 0.213             ;
-; gen_counter:u4|i_count[17]                  ; gen_counter:u4|term                         ; 0.213             ;
-; gen_counter:u4|i_count[16]                  ; gen_counter:u4|term                         ; 0.213             ;
-; gen_counter:u4|i_count[15]                  ; gen_counter:u4|term                         ; 0.213             ;
-; gen_counter:u4|i_count[13]                  ; gen_counter:u4|term                         ; 0.213             ;
-; gen_counter:u4|i_count[14]                  ; gen_counter:u4|term                         ; 0.213             ;
-; gen_counter:u4|i_count[12]                  ; gen_counter:u4|term                         ; 0.213             ;
-; gen_counter:u4|i_count[11]                  ; gen_counter:u4|term                         ; 0.213             ;
-; gen_counter:u4|i_count[10]                  ; gen_counter:u4|term                         ; 0.213             ;
-; gen_counter:u4|i_count[9]                   ; gen_counter:u4|term                         ; 0.213             ;
-; gen_counter:u4|i_count[7]                   ; gen_counter:u4|term                         ; 0.213             ;
-; gen_counter:u4|i_count[8]                   ; gen_counter:u4|term                         ; 0.213             ;
-; gen_counter:u4|i_count[6]                   ; gen_counter:u4|term                         ; 0.213             ;
-; gen_counter:u4|i_count[5]                   ; gen_counter:u4|term                         ; 0.213             ;
-; gen_counter:u4|i_count[4]                   ; gen_counter:u4|term                         ; 0.213             ;
-; gen_counter:u4|i_count[3]                   ; gen_counter:u4|term                         ; 0.213             ;
-; gen_counter:u4|i_count[2]                   ; gen_counter:u4|term                         ; 0.213             ;
-; gen_counter:u4|i_count[0]                   ; gen_counter:u4|term                         ; 0.213             ;
-; gen_counter:u4|i_count[1]                   ; gen_counter:u4|term                         ; 0.213             ;
-; seconds_controller:u7|counter[31]           ; seconds_controller:u7|count_out[31]         ; 0.186             ;
-; seconds_controller:u6|counter[28]           ; seconds_controller:u6|count_out[28]         ; 0.150             ;
-; seconds_controller:u8|counter[22]           ; seconds_controller:u8|count_out[22]         ; 0.150             ;
-; seconds_controller:u8|counter[25]           ; seconds_controller:u8|count_out[25]         ; 0.137             ;
-; seconds_controller:u6|counter[17]           ; seconds_controller:u6|count_out[17]         ; 0.044             ;
-; seconds_controller:u6|counter[29]           ; seconds_controller:u6|count_out[29]         ; 0.042             ;
-; seconds_controller:u8|counter[8]            ; seconds_controller:u8|count_out[8]          ; 0.039             ;
-; seconds_controller:u8|counter[24]           ; seconds_controller:u8|count_out[24]         ; 0.037             ;
-; seconds_controller:u7|counter[8]            ; seconds_controller:u7|count_out[8]          ; 0.035             ;
-; seconds_controller:u8|counter[11]           ; seconds_controller:u8|count_out[11]         ; 0.031             ;
-; seconds_controller:u6|counter[6]            ; seconds_controller:u6|count_out[6]          ; 0.027             ;
-; seconds_controller:u8|counter[6]            ; seconds_controller:u8|count_out[6]          ; 0.026             ;
-; seconds_controller:u8|counter[10]           ; seconds_controller:u8|count_out[10]         ; 0.024             ;
-; seconds_controller:u7|counter[6]            ; seconds_controller:u7|count_out[6]          ; 0.021             ;
-; seconds_controller:u7|counter[4]            ; seconds_controller:u7|count_out[4]          ; 0.019             ;
+; seconds_controller:u6|counter[31]           ; seconds_controller:u6|count_out[31]         ; 0.305             ;
+; seconds_controller:u6|current_state.running ; seconds_controller:u6|current_state.stopped ; 0.282             ;
+; seconds_controller:u7|counter[31]           ; seconds_controller:u7|count_out[31]         ; 0.280             ;
+; gen_counter:u2|term                         ; seconds_controller:u7|reset                 ; 0.252             ;
+; gen_counter:u3|i_count[22]                  ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[21]                  ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[20]                  ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[18]                  ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[19]                  ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[17]                  ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[16]                  ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[15]                  ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[14]                  ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[13]                  ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[12]                  ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[11]                  ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[10]                  ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[9]                   ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[8]                   ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[6]                   ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[5]                   ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[4]                   ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[3]                   ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[2]                   ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[1]                   ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[0]                   ; gen_counter:u3|term                         ; 0.226             ;
+; gen_counter:u3|i_count[7]                   ; gen_counter:u3|term                         ; 0.226             ;
+; seconds_controller:u6|current_state.idle    ; seconds_controller:u6|current_state.running ; 0.220             ;
+; seconds_controller:u9|counter[31]           ; seconds_controller:u9|count_out[31]         ; 0.178             ;
+; seconds_controller:u6|current_state.stopped ; seconds_controller:u6|current_state.idle    ; 0.161             ;
+; seconds_controller:u8|counter[28]           ; seconds_controller:u8|count_out[28]         ; 0.149             ;
+; seconds_controller:u6|counter[25]           ; seconds_controller:u6|count_out[25]         ; 0.146             ;
+; seconds_controller:u7|counter[28]           ; seconds_controller:u7|count_out[28]         ; 0.136             ;
+; seconds_controller:u6|counter[28]           ; seconds_controller:u6|count_out[28]         ; 0.132             ;
+; seconds_controller:u7|counter[30]           ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[29]           ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[26]           ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[25]           ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[24]           ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[23]           ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[22]           ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[21]           ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[20]           ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[19]           ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[18]           ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[17]           ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[16]           ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[15]           ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[14]           ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[13]           ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[12]           ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[11]           ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[10]           ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[9]            ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[8]            ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[27]           ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[6]            ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[5]            ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[4]            ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[3]            ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[1]            ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[0]            ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[7]            ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u7|counter[2]            ; seconds_controller:u7|reset                 ; 0.127             ;
+; seconds_controller:u9|counter[30]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[28]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[27]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[26]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[25]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[24]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[29]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[22]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[21]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[20]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[19]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[18]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[23]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[16]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[15]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[14]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[13]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[12]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[17]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[10]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[9]            ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[8]            ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[7]            ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[6]            ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[5]            ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[4]            ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[3]            ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[1]            ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[0]            ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[11]           ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u9|counter[2]            ; seconds_controller:u9|reset                 ; 0.104             ;
+; seconds_controller:u6|counter[26]           ; seconds_controller:u6|count_out[26]         ; 0.061             ;
+; seconds_controller:u8|counter[10]           ; seconds_controller:u8|count_out[10]         ; 0.026             ;
+; seconds_controller:u6|counter[0]            ; seconds_controller:u6|count_out[0]          ; 0.025             ;
 +---------------------------------------------+---------------------------------------------+-------------------+
-Note: This table only shows the top 43 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 98 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2720,29 +2779,29 @@ Info (332143): No user constrained clock uncertainty found in the design. Callin
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (170189): Fitter placement preparation operations beginning
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:07
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X78_Y11 to location X89_Y22
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X78_Y11 to location X89_Y22
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.59 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.31 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab7/DE1_SOC_golden_top.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 180 warnings
-    Info: Peak virtual memory: 6417 megabytes
-    Info: Processing ended: Sun Oct 28 14:22:09 2018
-    Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:00:55
+    Info: Peak virtual memory: 6422 megabytes
+    Info: Processing ended: Mon Oct 29 21:57:13 2018
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:45
 
 
 +----------------------------+

@@ -1,0 +1,52 @@
+LIBRARY ieee;
+USE ieee.NUMERIC_STD.all;
+use ieee.STD_LOGIC_1164.all;
+
+entity delay_controller is
+	port (
+		clk : in std_logic;
+		start, stop : in std_logic;
+		count : in std_logic;
+		reset : out std_logic;
+		start_out : out integer
+		);
+end entity seconds_controller;
+
+architecture logic of seconds_controller is
+	type state_type is (ready, delay_start, delay_stop);
+		
+	signal current_state: state_type := idle;
+	signal next_state: state_type := delay_start;
+	
+begin
+	process(clk)
+	begin
+	if rising_edge(clk) then
+			if count = '1' then
+				current_state <= next_state;
+				start_out <= is_running;
+			end if;
+		end if
+	end process;
+	
+	process(current_state)
+	begin
+		is_running <= '0';
+		case current_state is
+			when ready =>
+				if start = '1' then
+					next_state <= delay_start;
+				else
+					next_state <= current_state;
+				end if;
+			when delay_start =>
+				is_running <= '1';
+				if stop = '1' then
+					next_state <= delay_stop;
+				else
+					next_state <= current_state;
+				end if;
+			when others =>
+				next_state <= delay_stop;
+			end case;
+		end process;

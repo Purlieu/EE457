@@ -1,0 +1,205 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab7a/lab7/lab7
+Ede1_top
+Z1 w1540881251
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8de1_top.vhd
+Z6 Fde1_top.vhd
+l0
+L6
+V0iHWLC<QCM@4<5bDLhVKh2
+!s100 `>76^;E@Y_z^0MHIh=ndQ0
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1540883260
+!i10b 1
+Z9 !s108 1540883260.000000
+Z10 !s90 -reportprogress|300|de1_top.vhd|
+Z11 !s107 de1_top.vhd|
+!i113 1
+Z12 tExplicit 1 CvgOpt 0
+Astruct
+R2
+R3
+R4
+DEx4 work 7 de1_top 0 22 0iHWLC<QCM@4<5bDLhVKh2
+l97
+L42
+V_2[BC8mcj@aOl2QE2doCm1
+!s100 2Ki3CID=Kd^GbDj[SaB[d3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+Ede1_top_lab7_tb
+Z13 w1540881726
+R2
+R3
+R4
+R0
+Z14 8de1_top_vhdl_tb.vhd
+Z15 Fde1_top_vhdl_tb.vhd
+l0
+L5
+V4Wg1EEBDeLLSWG9]E5QMl2
+!s100 Y>:>zi`VF[H<?eH:odaC80
+R7
+32
+R8
+!i10b 1
+R9
+Z16 !s90 -reportprogress|300|de1_top_vhdl_tb.vhd|
+Z17 !s107 de1_top_vhdl_tb.vhd|
+!i113 1
+R12
+Abehav
+R2
+R3
+R4
+Z18 DEx4 work 15 de1_top_lab7_tb 0 22 4Wg1EEBDeLLSWG9]E5QMl2
+l46
+L8
+Z19 V]?jF3BEBDi^Z3bbJ[6RoS2
+Z20 !s100 VC3O[eebL_46PLJMm16=f3
+R7
+32
+R8
+!i10b 1
+R9
+R16
+R17
+!i113 1
+R12
+Egen_counter
+Z21 w1540879977
+R2
+R3
+R4
+R0
+Z22 8counter.vhd
+Z23 Fcounter.vhd
+l0
+L5
+Vdn<WOoajlVeELEdWB3Fi90
+!s100 o>2laMaBGEW5WGg86=Rn:0
+R7
+32
+Z24 !s110 1540883259
+!i10b 1
+Z25 !s108 1540883259.000000
+Z26 !s90 -reportprogress|300|counter.vhd|
+Z27 !s107 counter.vhd|
+!i113 1
+R12
+Artl
+R2
+R3
+R4
+DEx4 work 11 gen_counter 0 22 dn<WOoajlVeELEdWB3Fi90
+l26
+L22
+V9]UEO]I1bDcV3AU1bSP>N3
+!s100 d0?>FW^S4MTFXLg0_^N:?3
+R7
+32
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R12
+Eseven_segment_controller
+R21
+R2
+R3
+R4
+R0
+Z28 8seven_segment_controller.vhd
+Z29 Fseven_segment_controller.vhd
+l0
+L5
+V6X^[Qh0Rdd@j6PzWo]3cD0
+!s100 5RTQm6E<FE=LRA]zQT?YW1
+R7
+32
+R24
+!i10b 1
+R25
+Z30 !s90 -reportprogress|300|seven_segment_controller.vhd|
+Z31 !s107 seven_segment_controller.vhd|
+!i113 1
+R12
+Alogic
+R2
+R3
+R4
+DEx4 work 24 seven_segment_controller 0 22 6X^[Qh0Rdd@j6PzWo]3cD0
+l14
+L12
+VH;ni6SlHf1?bi0WJNS6DC3
+!s100 P]X@EXK1V?C>6_?8Waofn1
+R7
+32
+R24
+!i10b 1
+R25
+R30
+R31
+!i113 1
+R12
+Estopwatch
+Z32 w1540883254
+R2
+R3
+R4
+R0
+Z33 8stopwatch.vhd
+Z34 Fstopwatch.vhd
+l0
+L5
+V73=9_6RUkVoGg^T[Dg>TH3
+!s100 ^JH0INV2]Ai0S[h1VB8^G0
+R7
+32
+R24
+!i10b 1
+R25
+Z35 !s90 -reportprogress|300|stopwatch.vhd|
+Z36 !s107 stopwatch.vhd|
+!i113 1
+R12
+Alogic
+R2
+R3
+R4
+DEx4 work 9 stopwatch 0 22 73=9_6RUkVoGg^T[Dg>TH3
+l35
+L20
+VnNYmoKSnBjl3ec4XWA]KS0
+!s100 o_2XkKM4bmAC?0?10`>jj3
+R7
+32
+R24
+!i10b 1
+R25
+R35
+R36
+!i113 1
+R12

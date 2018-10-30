@@ -17,7 +17,7 @@
 #******************************************************************************
 
 vlib work
-vcom seconds_controller.vhd
+vcom stopwatch.vhd
 vcom counter.vhd
 vcom seven_segment_controller.vhd
 vcom de1_top.vhd 
@@ -35,8 +35,8 @@ add wave -noupdate /hex2
 add wave -noupdate /hex3
 
 add wave -noupdate -divider {LED Controller}
-add wave -noupdate /de1_top_lab7_tb/dut/u6/current_state	
-add wave -noupdate /de1_top_lab7_tb/dut/u5/next_State
+add wave -noupdate /de1_top_lab7_tb/dut/u2/current_state	
+add wave -noupdate /de1_top_lab7_tb/dut/u2/next_State
 
 view wave
 run 200 ns
