@@ -22,12 +22,12 @@ end entity stopwatch;
 	
 architecture logic of stopwatch is
 
-type state_type is (idle, delay, running, stopped, reflex, reset, results, fail);
+type state_type is (idle, delay, running, stopped, reflex, reset, results, fail, reset_again, reflex_again, results_two);
 		
 	signal current_state: state_type := idle;
 	signal next_state: state_type := running;
 		
-	signal is_running : std_logic_vector(2 downto 0);
+	signal is_running : std_logic_vector(3 downto 0);
 	signal delay_completed : std_logic;
 	signal result_completed : std_logic := '0';
 	signal hundredths : integer := 0;
@@ -40,16 +40,19 @@ type state_type is (idle, delay, running, stopped, reflex, reset, results, fail)
 	signal seconds_reflex : integer := 0;
 	signal tens_reflex : integer := 0;
 	
-	
 	signal holdval : integer := 0;
 	signal total : integer := 0;
-	signal attempt : integer := 0;
+	signal attempt : integer := 1;
 		
 begin
 	process(clk, start, is_running)
+		variable converter : std_logic_vector(13 downto 0);
+		variable tempTotal : integer := 0;
 	begin
 	total <= total;
-	if(clk'event and clk = '1') and is_running = "001" then
+	tempTotal := tempTotal;
+	converter := converter;
+	if(clk'event and clk = '1') and is_running = "0001" then
 	if count = '1' then
 			delay_completed <= '0';
 			if seconds = 1 then 
@@ -71,20 +74,21 @@ begin
 			end if;
 			current_state <= next_state;
 		end if;
-	elsif(clk'event and clk = '1') and is_running = "100" then
-	if count = '1' then
-		total <= ((hundredths + (tenths * 10) + (seconds * 100) + (tens * 1000)));
+	elsif(clk'event and clk = '1') and (is_running = "0100" or is_running = "1000") then
+		if count = '1' then
+			tempTotal := ((hundredths + (tenths * 10) + (seconds * 100) + (tens * 1000)));
+			converter := std_logic_vector(to_unsigned(tempTotal, 14));
+			total <= to_integer(unsigned(converter(3 downto 0))) * 50;
 		hundredths <= 0;
 		tenths <= 0;
 		seconds <= 0;
 		tens <= 0;
+		holdval <= 0;
+		result_completed <= '0';
 		current_state <= next_state;
-		if result_completed = '0' then
-			attempt <= attempt + 1;
 		end if;
-	end if;
-	elsif(clk'event and clk = '1') and is_running = "010" then
-	if count = '1' then
+	elsif(clk'event and clk = '1') and is_running = "0010" then
+		if count = '1' then
 			hundredths <= hundredths + 1;
 			if hundredths = 9 then
 				hundredths <= 0;
@@ -102,15 +106,16 @@ begin
 					end if;
 				end if;
 		current_state <= next_state;
-	end if;
-	elsif(clk'event and clk = '1') and is_running = "101" then
-	if count = '1' then
+		end if;
+	elsif(clk'event and clk = '1') and (is_running = "0101" or is_running = "1001") then
+		if count = '1' then
 			holdval <= holdval + 1;
 			if holdval >= total then
 				result_completed <= '1';
 			else
 				result_completed <= '0';
 			end if;
+			if result_completed = '1' then
 			hundredths <= hundredths + 1;
 			if hundredths = 9 then
 				hundredths <= 0;
@@ -127,18 +132,19 @@ begin
 						end if;
 					end if;
 				end if;
+			end if;
 		current_state <= next_state;
-	end if;
+		end if;
 	elsif(clk'event and clk = '1') then
-	if count = '1' then
+		if count = '1' then
 			current_state <= next_state;
-	end if;
+			end if;
 	end if;
 	end process;
 	
 	process(current_state, start, delay_completed, result_completed, stop, tens, hundredths, tenths, seconds)
 	begin
-		is_running <= "000";
+		is_running <= "0000";
 		LED_out <= '0';
 		hundreds_out <= 0;
 		tenths_out <= 0;
@@ -152,7 +158,7 @@ begin
 					next_state <= idle;
 				end if;
 			when delay =>
-				is_running <= "001";
+				is_running <= "0001";
 				if delay_completed = '1' then
 					next_state <= running;
 				else
@@ -160,14 +166,14 @@ begin
 				end if;
 			when running =>
 			LED_out <= '1';
-			is_running <= "010";
+			is_running <= "0010";
 				if stop = '1' then
 					next_state <= stopped;
 				else
 					next_state <= running;
 				end if;
 			when stopped =>
-				is_running <= "011";
+				is_running <= "0011";
 				hundreds_out <= hundredths;
 				tenths_out <= tenths;
 				seconds_out <= seconds;
@@ -178,10 +184,10 @@ begin
 					next_state <= stopped;
 				end if;
 			when reset =>
-				is_running <= "100";
+				is_running <= "0100";
 				next_state <= reflex;
 			when reflex =>
-				is_running <= "101";
+				is_running <= "0101";
 				hundreds_out <= hundredths;
 				tenths_out <= tenths;
 				seconds_out <= seconds;
@@ -189,21 +195,65 @@ begin
 				if result_completed = '1' then
 					LED_out <= '1';
 				end if;
-				if stop = '1' then
-					next_state <= results;
+				if (stop = '1' and result_completed = '1') then
+						next_state <= results;
+				elsif (stop = '1' and result_completed = '0') then
+						next_state <= reset_again;
 				else
 					next_state <= reflex;
 				end if;
+			when reset_again =>
+				is_running <= "1000";
+				if start = '1' then 
+					next_state <= reflex_again;
+				else
+					next_state <= reset_again;
+				end if;
+			when reflex_again =>
+				is_running <= "1001";
+				hundreds_out <= hundredths;
+				tenths_out <= tenths;
+				seconds_out <= seconds;
+				ten_seconds_out <= tens;
+				if result_completed = '1' then
+					LED_out <= '1';
+				end if;
+				if (stop = '1' and result_completed = '1') then
+						next_state <= results_two;
+				elsif (stop = '1' and result_completed = '0') then
+						next_state <= fail;
+				else
+					next_state <= reflex_again;
+				end if;
 			when fail =>
-					is_running <= "111";
+					hundreds_out <= 12;
+					tenths_out <= 1;
+					seconds_out <= 11;
+					ten_seconds_out <= 10;
+					is_running <= "0111";
 					next_state <= fail;
+			when results_two =>
+				hundreds_out <= hundredths;
+				tenths_out <= tenths;
+				seconds_out <= seconds;
+				ten_seconds_out <= tens;
+				is_running <= "1010";
+				if start = '1' then
+					next_state <= reset_again;
+				else
+					next_state <= results_two;
+				end if;
 			when others =>
 				hundreds_out <= hundredths;
 				tenths_out <= tenths;
 				seconds_out <= seconds;
 				ten_seconds_out <= tens;
-				is_running <= "110";
-				next_state <= results;
+				is_running <= "0110";
+				if start = '1' then
+					next_state <= reset;
+				else
+					next_state <= results;
+				end if;
 			end case;
 		end process;
 end logic;

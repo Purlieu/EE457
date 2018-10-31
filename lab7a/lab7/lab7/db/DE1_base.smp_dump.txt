@@ -1,11 +1,14 @@
 
 State Machine - |DE1_top|stopwatch:u2|current_state
-Name current_state.fail current_state.results current_state.reset current_state.reflex current_state.stopped current_state.running current_state.delay current_state.idle 
-current_state.idle 0 0 0 0 0 0 0 0 
-current_state.delay 0 0 0 0 0 0 1 1 
-current_state.running 0 0 0 0 0 1 0 1 
-current_state.stopped 0 0 0 0 1 0 0 1 
-current_state.reflex 0 0 0 1 0 0 0 1 
-current_state.reset 0 0 1 0 0 0 0 1 
-current_state.results 0 1 0 0 0 0 0 1 
-current_state.fail 1 0 0 0 0 0 0 1 
+Name current_state.results_two current_state.reflex_again current_state.reset_again current_state.fail current_state.results current_state.reset current_state.reflex current_state.stopped current_state.running current_state.delay current_state.idle 
+current_state.idle 0 0 0 0 0 0 0 0 0 0 0 
+current_state.delay 0 0 0 0 0 0 0 0 0 1 1 
+current_state.running 0 0 0 0 0 0 0 0 1 0 1 
+current_state.stopped 0 0 0 0 0 0 0 1 0 0 1 
+current_state.reflex 0 0 0 0 0 0 1 0 0 0 1 
+current_state.reset 0 0 0 0 0 1 0 0 0 0 1 
+current_state.results 0 0 0 0 1 0 0 0 0 0 1 
+current_state.fail 0 0 0 1 0 0 0 0 0 0 1 
+current_state.reset_again 0 0 1 0 0 0 0 0 0 0 1 
+current_state.reflex_again 0 1 0 0 0 0 0 0 0 0 1 
+current_state.results_two 1 0 0 0 0 0 0 0 0 0 1 

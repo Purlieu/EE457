@@ -1,4 +1,4 @@
-	LIBRARY ieee;
+LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
 
@@ -64,8 +64,16 @@ begin
 		
 		key <= "1101";
 
-		wait for 80*clk_cycle;
+		wait for 1000*clk_cycle;
 		
+		key <= "1110";
+
+		wait for 1000*clk_cycle;
+		
+		
+		key <= "1101";
+
+		wait for 1000*clk_cycle;
 		
 		end process;
 		

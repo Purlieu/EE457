@@ -38,8 +38,8 @@ add wave -noupdate -divider {LED Controller}
 add wave -noupdate /de1_top_lab7_tb/dut/u2/current_state	
 add wave -noupdate /de1_top_lab7_tb/dut/u2/next_State
 add wave -noupdate /de1_top_lab7_tb/dut/u2/delay_completed
-add wave -noupdate /de1_top_lab7_tb/dut/u2/hold_val
-add wave -noupdate /de1_top_lab7_tb/dut/u2/total
+add wave -noupdate /de1_top_lab7_tb/dut/u2/converter
+add wave -noupdate /de1_top_lab7_tb/dut/u2/tempTotal
 add wave -noupdate /de1_top_lab7_tb/dut/u2/result_completed
 add wave -noupdate /de1_top_lab7_tb/dut/u2/start
 add wave -noupdate /de1_top_lab7_tb/dut/u2/hundreds_out

@@ -32,11 +32,16 @@ begin
 				light_out <= "0000010";
 			when 7 => 
 				light_out <= "1110000";
-				light_out <= "1111000";
 			when 8 =>
 				light_out <= "0000000";
 			when 9 =>
 				light_out <= "0010000";
+			when 10 =>
+				light_out <= "0001110";
+			when 11 =>
+				light_out <= "0001000";
+			when 12 =>
+				light_out <= "1000111";
 			when others =>
 				light_out <= "1111111";
 		end case;

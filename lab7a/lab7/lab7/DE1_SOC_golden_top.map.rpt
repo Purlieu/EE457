@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SOC_golden_top
-Tue Oct 30 17:46:27 2018
+Wed Oct 31 00:21:13 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -48,17 +48,17 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 30 17:46:27 2018       ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct 31 00:21:13 2018       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SOC_golden_top                          ;
 ; Top-level Entity Name           ; DE1_top                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 231                                         ;
+; Total registers                 ; 213                                         ;
 ; Total pins                      ; 67                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 4                                           ;
+; Total DSP Blocks                ; 3                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -168,9 +168,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -191,25 +189,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 288            ;
+; Estimate of Logic utilization (ALMs needed) ; 302            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 451            ;
+; Combinational ALUT usage for logic          ; 450            ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 124            ;
-;     -- 5 input functions                    ; 16             ;
-;     -- 4 input functions                    ; 36             ;
-;     -- <=3 input functions                  ; 275            ;
+;     -- 6 input functions                    ; 152            ;
+;     -- 5 input functions                    ; 63             ;
+;     -- 4 input functions                    ; 21             ;
+;     -- <=3 input functions                  ; 214            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 231            ;
+; Dedicated logic registers                   ; 213            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 67             ;
 ;                                             ;                ;
-; Total DSP Blocks                            ; 4              ;
+; Total DSP Blocks                            ; 3              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; clock_50~input ;
-; Maximum fan-out                             ; 231            ;
-; Total fan-out                               ; 2614           ;
-; Average fan-out                             ; 3.19           ;
+; Maximum fan-out                             ; 213            ;
+; Total fan-out                               ; 2689           ;
+; Average fan-out                             ; 3.36           ;
 +---------------------------------------------+----------------+
 
 
@@ -218,56 +216,58 @@ refer to the applicable agreement for further details.
 +----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+--------------------------+--------------+
 ; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Entity Name              ; Library Name ;
 +----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+--------------------------+--------------+
-; |DE1_top                         ; 451 (0)             ; 231 (0)                   ; 0                 ; 4          ; 67   ; 0            ; |DE1_top                             ; DE1_top                  ; work         ;
+; |DE1_top                         ; 450 (0)             ; 213 (0)                   ; 0                 ; 3          ; 67   ; 0            ; |DE1_top                             ; DE1_top                  ; work         ;
 ;    |gen_counter:u1|              ; 35 (35)             ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_top|gen_counter:u1              ; gen_counter              ; work         ;
-;    |seven_segment_controller:u3| ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_top|seven_segment_controller:u3 ; seven_segment_controller ; work         ;
-;    |seven_segment_controller:u4| ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_top|seven_segment_controller:u4 ; seven_segment_controller ; work         ;
-;    |seven_segment_controller:u5| ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_top|seven_segment_controller:u5 ; seven_segment_controller ; work         ;
-;    |seven_segment_controller:u6| ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_top|seven_segment_controller:u6 ; seven_segment_controller ; work         ;
-;    |stopwatch:u2|                ; 344 (344)           ; 201 (201)                 ; 0                 ; 4          ; 0    ; 0            ; |DE1_top|stopwatch:u2                ; stopwatch                ; work         ;
+;    |seven_segment_controller:u3| ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_top|seven_segment_controller:u3 ; seven_segment_controller ; work         ;
+;    |seven_segment_controller:u4| ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_top|seven_segment_controller:u4 ; seven_segment_controller ; work         ;
+;    |seven_segment_controller:u5| ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_top|seven_segment_controller:u5 ; seven_segment_controller ; work         ;
+;    |seven_segment_controller:u6| ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_top|seven_segment_controller:u6 ; seven_segment_controller ; work         ;
+;    |stopwatch:u2|                ; 360 (360)           ; 183 (183)                 ; 0                 ; 3          ; 0    ; 0            ; |DE1_top|stopwatch:u2                ; stopwatch                ; work         ;
 +----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary    ;
-+-----------------------------------+-------------+
-; Statistic                         ; Number Used ;
-+-----------------------------------+-------------+
-; Two Independent 18x18             ; 2           ;
-; Independent 18x18 plus 36         ; 2           ;
-; Total number of DSP blocks        ; 4           ;
-;                                   ;             ;
-; Fixed Point Unsigned Multiplier   ; 2           ;
-; Fixed Point Mixed Sign Multiplier ; 2           ;
-+-----------------------------------+-------------+
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Independent 9x9                 ; 1           ;
+; Two Independent 18x18           ; 2           ;
+; Total number of DSP blocks      ; 3           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 3           ;
++---------------------------------+-------------+
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |DE1_top|stopwatch:u2|current_state                                                                                                                                                        ;
-+-----------------------+--------------------+-----------------------+---------------------+----------------------+-----------------------+-----------------------+---------------------+--------------------+
-; Name                  ; current_state.fail ; current_state.results ; current_state.reset ; current_state.reflex ; current_state.stopped ; current_state.running ; current_state.delay ; current_state.idle ;
-+-----------------------+--------------------+-----------------------+---------------------+----------------------+-----------------------+-----------------------+---------------------+--------------------+
-; current_state.idle    ; 0                  ; 0                     ; 0                   ; 0                    ; 0                     ; 0                     ; 0                   ; 0                  ;
-; current_state.delay   ; 0                  ; 0                     ; 0                   ; 0                    ; 0                     ; 0                     ; 1                   ; 1                  ;
-; current_state.running ; 0                  ; 0                     ; 0                   ; 0                    ; 0                     ; 1                     ; 0                   ; 1                  ;
-; current_state.stopped ; 0                  ; 0                     ; 0                   ; 0                    ; 1                     ; 0                     ; 0                   ; 1                  ;
-; current_state.reflex  ; 0                  ; 0                     ; 0                   ; 1                    ; 0                     ; 0                     ; 0                   ; 1                  ;
-; current_state.reset   ; 0                  ; 0                     ; 1                   ; 0                    ; 0                     ; 0                     ; 0                   ; 1                  ;
-; current_state.results ; 0                  ; 1                     ; 0                   ; 0                    ; 0                     ; 0                     ; 0                   ; 1                  ;
-; current_state.fail    ; 1                  ; 0                     ; 0                   ; 0                    ; 0                     ; 0                     ; 0                   ; 1                  ;
-+-----------------------+--------------------+-----------------------+---------------------+----------------------+-----------------------+-----------------------+---------------------+--------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |DE1_top|stopwatch:u2|current_state                                                                                                                                                                                                                                                  ;
++----------------------------+---------------------------+----------------------------+---------------------------+--------------------+-----------------------+---------------------+----------------------+-----------------------+-----------------------+---------------------+--------------------+
+; Name                       ; current_state.results_two ; current_state.reflex_again ; current_state.reset_again ; current_state.fail ; current_state.results ; current_state.reset ; current_state.reflex ; current_state.stopped ; current_state.running ; current_state.delay ; current_state.idle ;
++----------------------------+---------------------------+----------------------------+---------------------------+--------------------+-----------------------+---------------------+----------------------+-----------------------+-----------------------+---------------------+--------------------+
+; current_state.idle         ; 0                         ; 0                          ; 0                         ; 0                  ; 0                     ; 0                   ; 0                    ; 0                     ; 0                     ; 0                   ; 0                  ;
+; current_state.delay        ; 0                         ; 0                          ; 0                         ; 0                  ; 0                     ; 0                   ; 0                    ; 0                     ; 0                     ; 1                   ; 1                  ;
+; current_state.running      ; 0                         ; 0                          ; 0                         ; 0                  ; 0                     ; 0                   ; 0                    ; 0                     ; 1                     ; 0                   ; 1                  ;
+; current_state.stopped      ; 0                         ; 0                          ; 0                         ; 0                  ; 0                     ; 0                   ; 0                    ; 1                     ; 0                     ; 0                   ; 1                  ;
+; current_state.reflex       ; 0                         ; 0                          ; 0                         ; 0                  ; 0                     ; 0                   ; 1                    ; 0                     ; 0                     ; 0                   ; 1                  ;
+; current_state.reset        ; 0                         ; 0                          ; 0                         ; 0                  ; 0                     ; 1                   ; 0                    ; 0                     ; 0                     ; 0                   ; 1                  ;
+; current_state.results      ; 0                         ; 0                          ; 0                         ; 0                  ; 1                     ; 0                   ; 0                    ; 0                     ; 0                     ; 0                   ; 1                  ;
+; current_state.fail         ; 0                         ; 0                          ; 0                         ; 1                  ; 0                     ; 0                   ; 0                    ; 0                     ; 0                     ; 0                   ; 1                  ;
+; current_state.reset_again  ; 0                         ; 0                          ; 1                         ; 0                  ; 0                     ; 0                   ; 0                    ; 0                     ; 0                     ; 0                   ; 1                  ;
+; current_state.reflex_again ; 0                         ; 1                          ; 0                         ; 0                  ; 0                     ; 0                   ; 0                    ; 0                     ; 0                     ; 0                   ; 1                  ;
+; current_state.results_two  ; 1                         ; 0                          ; 0                         ; 0                  ; 0                     ; 0                   ; 0                    ; 0                     ; 0                     ; 0                   ; 1                  ;
++----------------------------+---------------------------+----------------------------+---------------------------+--------------------+-----------------------+---------------------+----------------------+-----------------------+-----------------------+---------------------+--------------------+
 
 
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; stopwatch:u2|current_state.fail       ; Lost fanout        ;
-; Total Number of Removed Registers = 1 ;                    ;
-+---------------------------------------+--------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; stopwatch:u2|total[10..31]             ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 22 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -275,27 +275,27 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 231   ;
-; Number of registers using Synchronous Clear  ; 154   ;
+; Total registers                              ; 213   ;
+; Number of registers using Synchronous Clear  ; 189   ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 198   ;
+; Number of registers using Clock Enable       ; 179   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
-; 6:1                ; 29 bits   ; 116 LEs       ; 0 LEs                ; 116 LEs                ; Yes        ; |DE1_top|stopwatch:u2|tens[0]        ;
-; 7:1                ; 32 bits   ; 128 LEs       ; 0 LEs                ; 128 LEs                ; Yes        ; |DE1_top|stopwatch:u2|hundredths[21] ;
-; 8:1                ; 32 bits   ; 160 LEs       ; 0 LEs                ; 160 LEs                ; Yes        ; |DE1_top|stopwatch:u2|seconds[7]     ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |DE1_top|stopwatch:u2|tens[3]        ;
-; 8:1                ; 32 bits   ; 160 LEs       ; 0 LEs                ; 160 LEs                ; Yes        ; |DE1_top|stopwatch:u2|tenths[22]     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_top|stopwatch:u2|holdval[28]   ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 0 LEs                ; 128 LEs                ; Yes        ; |DE1_top|stopwatch:u2|tens[28]      ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 0 LEs                ; 128 LEs                ; Yes        ; |DE1_top|stopwatch:u2|hundredths[1] ;
+; 7:1                ; 32 bits   ; 128 LEs       ; 0 LEs                ; 128 LEs                ; Yes        ; |DE1_top|stopwatch:u2|tenths[3]     ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 0 LEs                ; 160 LEs                ; Yes        ; |DE1_top|stopwatch:u2|seconds[4]    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 
 
 +-------------------------------------------------------------+
@@ -326,31 +326,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 231                         ;
-;     ENA               ; 73                          ;
-;     ENA SCLR          ; 125                         ;
+; arriav_ff             ; 213                         ;
+;     ENA               ; 19                          ;
+;     ENA SCLR          ; 160                         ;
 ;     SCLR              ; 29                          ;
-;     plain             ; 4                           ;
-; arriav_lcell_comb     ; 453                         ;
-;     arith             ; 188                         ;
-;         1 data inputs ; 187                         ;
-;         2 data inputs ; 1                           ;
-;     normal            ; 202                         ;
+;     plain             ; 5                           ;
+; arriav_lcell_comb     ; 452                         ;
+;     arith             ; 193                         ;
+;         1 data inputs ; 188                         ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 255                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 19                          ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 36                          ;
-;         5 data inputs ; 16                          ;
-;         6 data inputs ; 124                         ;
-;     shared            ; 63                          ;
 ;         2 data inputs ; 2                           ;
-;         3 data inputs ; 61                          ;
-; arriav_mac            ; 4                           ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 21                          ;
+;         5 data inputs ; 63                          ;
+;         6 data inputs ; 152                         ;
+;     shared            ; 4                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 3                           ;
+; arriav_mac            ; 3                           ;
 ; boundary_port         ; 67                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 3.41                        ;
+; Average LUT depth     ; 3.47                        ;
 +-----------------------+-----------------------------+
 
 
@@ -369,7 +369,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Tue Oct 30 17:46:17 2018
+    Info: Processing started: Wed Oct 31 00:21:02 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_base -c DE1_SOC_golden_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -391,7 +391,7 @@ Info (12128): Elaborating entity "gen_counter" for hierarchy "gen_counter:u1" Fi
 Info (12128): Elaborating entity "stopwatch" for hierarchy "stopwatch:u2" File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab7a/lab7/lab7/DE1_top.vhd Line: 116
 Warning (10541): VHDL Signal Declaration warning at stopwatch.vhd(17): used implicit default value for signal "total_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab7a/lab7/lab7/stopwatch.vhd Line: 17
 Warning (10541): VHDL Signal Declaration warning at stopwatch.vhd(18): used implicit default value for signal "reset_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab7a/lab7/lab7/stopwatch.vhd Line: 18
-Warning (10492): VHDL Process Statement warning at stopwatch.vhd(51): signal "total" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab7a/lab7/lab7/stopwatch.vhd Line: 51
+Warning (10492): VHDL Process Statement warning at stopwatch.vhd(52): signal "total" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab7a/lab7/lab7/stopwatch.vhd Line: 52
 Info (12128): Elaborating entity "seven_segment_controller" for hierarchy "seven_segment_controller:u3" File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab7a/lab7/lab7/DE1_top.vhd Line: 131
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab7a/lab7/lab7/DE1_top.vhd Line: 19
@@ -418,7 +418,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab7a/lab7/lab7/DE1_top.vhd Line: 25
     Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab7a/lab7/lab7/DE1_top.vhd Line: 25
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 12 input pin(s) that do not drive logic
@@ -434,15 +433,15 @@ Warning (21074): Design contains 12 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab7a/lab7/lab7/DE1_top.vhd Line: 36
     Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab7a/lab7/lab7/DE1_top.vhd Line: 36
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab7a/lab7/lab7/DE1_top.vhd Line: 36
-Info (21057): Implemented 523 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 531 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 452 logic cells
-    Info (21062): Implemented 4 DSP elements
+    Info (21061): Implemented 461 logic cells
+    Info (21062): Implemented 3 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 42 warnings
-    Info: Peak virtual memory: 4885 megabytes
-    Info: Processing ended: Tue Oct 30 17:46:27 2018
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 4878 megabytes
+    Info: Processing ended: Wed Oct 31 00:21:13 2018
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:22
 
 
