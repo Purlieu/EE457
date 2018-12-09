@@ -34,22 +34,28 @@ add wave -noupdate /hex1
 add wave -noupdate /hex2
 add wave -noupdate /hex3
 
-add wave -noupdate -divider {LED Controller}
+add wave -noupdate -divider {State Controller}
 add wave -noupdate /de1_top_lab7_tb/dut/u2/current_state	
 add wave -noupdate /de1_top_lab7_tb/dut/u2/next_State
 add wave -noupdate /de1_top_lab7_tb/dut/u2/delay_completed
 add wave -noupdate /de1_top_lab7_tb/dut/u2/start
+add wave -noupdate -divider {Time}
 add wave -noupdate /de1_top_lab7_tb/dut/u2/hundreds_out
 add wave -noupdate /de1_top_lab7_tb/dut/u2/tenths_out
 add wave -noupdate /de1_top_lab7_tb/dut/u2/seconds_out
 add wave -noupdate /de1_top_lab7_tb/dut/u2/ten_seconds_out
-add wave -noupdate /de1_top_lab7_tb/dut/u2/is_running
-add wave -noupdate /de1_top_lab7_tb/dut/u2/total
+add wave -noupdate -divider {Wait Time}
 add wave -noupdate /de1_top_lab7_tb/dut/u2/hold_val
 add wave -noupdate /de1_top_lab7_tb/dut/u2/total
 add wave -noupdate /de1_top_lab7_tb/dut/u2/result_completed
 
-
-
+add wave -noupdate -divider {Light One}
+add wave -noupdate /de1_top_lab7_tb/dut/u3/light_out
+add wave -noupdate -divider {Light Two}
+add wave -noupdate /de1_top_lab7_tb/dut/u4/light_out
+add wave -noupdate -divider {Light Three}
+add wave -noupdate /de1_top_lab7_tb/dut/u5/light_out
+add wave -noupdate -divider {Light Four}
+add wave -noupdate /de1_top_lab7_tb/dut/u6/light_out
 view wave
 run 200 ns

@@ -59,22 +59,46 @@ begin
 		wait for 5 ns; -- wait for a fraction of the clock so stimulus is not occuring on clock edges
 		key <= "1110";
 
-		wait for 1000*clk_cycle;
+		wait for 200*clk_cycle;
 		
 		
 		key <= "1101";
 
-		wait for 1000*clk_cycle;
+		wait for 15*clk_cycle;
 		
 		key <= "1110";
 
-		wait for 1000*clk_cycle;
+		wait for 50000*clk_cycle;
 		
 		
 		key <= "1101";
 
-		wait for 1000*clk_cycle;
+		wait for 15*clk_cycle;
 		
+		key <= "1110";
+		
+		wait for 158*clk_cycle;
+		
+		
+		key <= "1101";
+
+		wait for 15*clk_cycle;
+		
+		key <= "1110";
+
+		wait for 15*clk_cycle;
+		
+		key <= "1101";
+
+		wait for 15*clk_cycle;
+		
+		key <= "1110";
+
+		wait for 15*clk_cycle;
+		
+		key <= "1101";
+
+		wait for 15*clk_cycle;
 		end process;
 		
 

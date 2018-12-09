@@ -114,9 +114,9 @@ begin
 		if reset_a = '1' then
 			current_state <= night_check;
 		elsif clk'EVENT and clk='1' then
-			if count = '1' then
+			--if count = '1' then
 				current_state <= next_state;
-			end if;
+			--end if;
 		end if;
 	end process;
 	

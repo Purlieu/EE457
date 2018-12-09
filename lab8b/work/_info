@@ -1,0 +1,244 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Mike/Desktop/Dorsey_Michael_Stiyer_Alex_Lab_1a_5b/Labs/lab8b
+Ede1_top
+Z1 w1543968766
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8de1_top.vhd
+Z6 Fde1_top.vhd
+l0
+L6
+V0iHWLC<QCM@4<5bDLhVKh2
+!s100 `>76^;E@Y_z^0MHIh=ndQ0
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1543969188
+!i10b 1
+Z9 !s108 1543969188.000000
+Z10 !s90 -reportprogress|300|de1_top.vhd|
+Z11 !s107 de1_top.vhd|
+!i113 1
+Z12 tExplicit 1 CvgOpt 0
+Astruct
+R2
+R3
+R4
+DEx4 work 7 de1_top 0 22 0iHWLC<QCM@4<5bDLhVKh2
+l105
+L42
+V6`8Yn:`Kn:mE_dbXH<iJ91
+!s100 f[:j6JNzMFGSYL@57MIM23
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+Ede1_top_tb
+Z13 w1543786465
+R2
+R3
+R4
+R0
+Z14 8de1_top_vhdl_tb.vhd
+Z15 Fde1_top_vhdl_tb.vhd
+l0
+L5
+VcIUaD5iY^N8c5OEND_eLL3
+!s100 ?^<C5O]MhZUCTb:i]MzRU3
+R7
+32
+Z16 !s110 1543969189
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|de1_top_vhdl_tb.vhd|
+Z18 !s107 de1_top_vhdl_tb.vhd|
+!i113 1
+R12
+Abehav
+R2
+R3
+R4
+Z19 DEx4 work 10 de1_top_tb 0 22 cIUaD5iY^N8c5OEND_eLL3
+l48
+L8
+Z20 V0beBi>RO1cz7Gm07SG8WP0
+Z21 !s100 3gah>DXjN^V5c=Q1I;mY60
+R7
+32
+R16
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+Edouble_d_ff
+Z22 w1543120776
+R2
+R3
+R4
+R0
+Z23 8double_d_ff.vhd
+Z24 Fdouble_d_ff.vhd
+l0
+L5
+V2J0nQHe4DS332o0iOEL<>3
+!s100 <o;fA2Ha0Aa8N<C?nie<i3
+R7
+32
+R8
+!i10b 1
+R9
+Z25 !s90 -reportprogress|300|double_d_ff.vhd|
+Z26 !s107 double_d_ff.vhd|
+!i113 1
+R12
+Alogic
+R2
+R3
+R4
+DEx4 work 11 double_d_ff 0 22 2J0nQHe4DS332o0iOEL<>3
+l16
+L14
+Vae6@fR2jLY>iiR:^zKnDM1
+!s100 iHI6h[Ac<mFFL0E;VKM9L0
+R7
+32
+R8
+!i10b 1
+R9
+R25
+R26
+!i113 1
+R12
+Egen_counter
+Z27 w1507166092
+R2
+R3
+R4
+R0
+Z28 8counter.vhd
+Z29 Fcounter.vhd
+l0
+L5
+Vdn<WOoajlVeELEdWB3Fi90
+!s100 o>2laMaBGEW5WGg86=Rn:0
+R7
+32
+R8
+!i10b 1
+R9
+Z30 !s90 -reportprogress|300|counter.vhd|
+Z31 !s107 counter.vhd|
+!i113 1
+R12
+Artl
+R2
+R3
+R4
+DEx4 work 11 gen_counter 0 22 dn<WOoajlVeELEdWB3Fi90
+l26
+L22
+V9]UEO]I1bDcV3AU1bSP>N3
+!s100 d0?>FW^S4MTFXLg0_^N:?3
+R7
+32
+R8
+!i10b 1
+R9
+R30
+R31
+!i113 1
+R12
+Eram32x4
+Z32 w1543118766
+Z33 DPx9 altera_mf 20 altera_mf_components 0 22 7RjT1Xb9^`L[coRHZN<9k2
+R3
+R4
+R0
+Z34 8ram32x4.vhd
+Z35 Fram32x4.vhd
+l0
+L42
+Vl6G@TfjVened2ef:P28^00
+!s100 Z<bkbJkWk<6VjYK?_PTkP2
+R7
+32
+R8
+!i10b 1
+R9
+Z36 !s90 -reportprogress|300|ram32x4.vhd|
+Z37 !s107 ram32x4.vhd|
+!i113 1
+R12
+Asyn
+R33
+R3
+R4
+DEx4 work 7 ram32x4 0 22 l6G@TfjVened2ef:P28^00
+l59
+L55
+VEkF0L1W`i6H7gdbfgmZaM2
+!s100 i:2jYZGdTM644hSL1FD0c3
+R7
+32
+R8
+!i10b 1
+R9
+R36
+R37
+!i113 1
+R12
+Eseven_segment_cntrl
+Z38 w1543116864
+R4
+R3
+R2
+R0
+Z39 8seven_segment_cntrl.vhd
+Z40 Fseven_segment_cntrl.vhd
+l0
+L5
+VBJFbiIM?HOB_H5Con]f:C3
+!s100 m88RfnKB<ZhR9FO=]2_a_0
+R7
+32
+R8
+!i10b 1
+R9
+Z41 !s90 -reportprogress|300|seven_segment_cntrl.vhd|
+Z42 !s107 seven_segment_cntrl.vhd|
+!i113 1
+R12
+Alogic
+R4
+R3
+R2
+DEx4 work 19 seven_segment_cntrl 0 22 BJFbiIM?HOB_H5Con]f:C3
+l14
+L13
+VCYgFlb^KV@bUmIEBaDHeF0
+!s100 ?EKB2>Qa8I3E4]HZjLOAb1
+R7
+32
+R8
+!i10b 1
+R9
+R41
+R42
+!i113 1
+R12

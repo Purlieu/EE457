@@ -1,0 +1,35 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+entity double_d_ff is
+	port(
+		input : std_logic_vector(9 downto 0);
+		clock : std_logic;
+		reset : std_logic;
+		output : std_logic_vector(9 downto 0)
+	);
+end entity double_d_ff;
+
+architecture logic of double_d_ff is
+	signal first_round : std_logic_vector(9 downto 0);
+begin
+	process(input, clock, reset)
+	begin
+		if reset = '0' then
+			first_round <= "0000000000";
+		else
+			first_round <= input;
+		end if;
+	end process
+	
+	process(first_round, clock, reset)
+	begin
+		if reset = '0' then
+			output <= "0000000000";
+		else
+			output <= first_round;
+		end if;
+	end process
+end logic;
+	

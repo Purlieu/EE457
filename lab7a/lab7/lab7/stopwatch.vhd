@@ -1,3 +1,4 @@
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
@@ -106,7 +107,7 @@ begin
 					end if;
 				end if;
 		current_state <= next_state;
-		end if;
+	end if;
 	elsif(clk'event and clk = '1') and (is_running = "0101" or is_running = "1001") then
 		if count = '1' then
 			holdval <= holdval + 1;
